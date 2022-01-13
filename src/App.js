@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import {HomePage} from "./components/Home/Home";
+import {Nav} from "./components/Nav/Nav";
+import {Resume} from "./components/Resume/Resume";
+import {AboutPage} from "./components/About/About";
+import {Footer} from "./components/Footer/Footer";
+import {Works} from "./components/Works/Works";
+import {Contact} from "./components/Contact/Contact";
+import {GlobalStyle} from "./styles/gobalStyles";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <GlobalStyle/>
+      <Nav/>
+      <HomePage/>
+      <AboutPage/>
+      <Works/>
+      <Resume/>
+      <Contact/>
+      <Footer/>
+      {/*<img src={process.env.PUBLIC_URL + `/images/image-2.jpg`} alt="img"/>*/}
     </div>
   );
 }
