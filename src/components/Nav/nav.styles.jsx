@@ -10,17 +10,17 @@ export const NavContainer = styled.div`
   .left-nav {
   }
 
-  .right-nav {
+  .right-nav ul {
     display: flex;
     line-height: 34px;
 
-    div {
+    li {
       padding: 10px;
     }
   }
 
   div .logo {
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
   }
 `

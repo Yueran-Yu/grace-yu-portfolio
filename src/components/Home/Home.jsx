@@ -5,7 +5,7 @@ import {Image} from "../Image";
 
 export const HomePage = () => {
   return (
-    <HomeContainer>
+    <HomeContainer id='home'>
       <div>
         <Typical
           steps={[`Home Page 🥳`, 1000,

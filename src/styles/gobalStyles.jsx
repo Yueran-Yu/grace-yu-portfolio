@@ -4,7 +4,7 @@ import {normalize} from 'styled-normalize';
 export const GlobalStyle = createGlobalStyle`
   ${normalize}
   :root {
-    --dark-green: #1b7a85;
+    --dark-green: #11253a;
     --medium-green: #2d98b3;
     --light-green: #9DC88D;
     --natural-yellow: #F1B24A;
@@ -31,8 +31,12 @@ export const GlobalStyle = createGlobalStyle`
   }
 
 
+  ul{
+    list-style:none;
+  }
+  
   a {
     text-decoration: none;
-    font-weight: 800;
+    color: inherit;
   }
 `

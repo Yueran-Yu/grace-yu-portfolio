@@ -1,11 +1,11 @@
 import React from 'react';
-import {ProjectsContainer} from "./Works.styles";
+import {WorksContainer} from "./Works.styles";
 
 export const Works = () => {
   return (
-    <ProjectsContainer>
-      Projects Page
-    </ProjectsContainer>
+    <WorksContainer id='work'>
+      <h1>Work Page</h1>
+    </WorksContainer>
   );
 };
 
