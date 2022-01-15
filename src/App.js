@@ -6,6 +6,7 @@ import {Footer} from "./components/Footer/Footer";
 import {Works} from "./components/Works/Works";
 import {Contact} from "./components/Contact/Contact";
 import {GlobalStyle} from "./styles/gobalStyles";
+import {BackToTop} from "./components/BackToTop/BackToTop";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
       <Resume/>
       <Contact/>
       <Footer/>
+      <BackToTop/>
       {/*<img src={process.env.PUBLIC_URL + `/images/image-2.jpg`} alt="img"/>*/}
     </div>
   );

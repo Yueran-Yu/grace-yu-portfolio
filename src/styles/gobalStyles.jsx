@@ -4,12 +4,15 @@ import {normalize} from 'styled-normalize';
 export const GlobalStyle = createGlobalStyle`
   ${normalize}
   :root {
-    --dark-green: #11253a;
-    --medium-green: #2d98b3;
-    --light-green: #9DC88D;
-    --natural-yellow: #F1B24A;
+    --prussian-blue: #1b2f50;
+    --celadon-blue: #457B9D;
+    --powder-blue: #A8DADC;
+    --honeydew: #F1FAEE;
+    --imperial-red: #E63946;
     --white: #FFFFFF;
-    --main-font: 'Roboto', sans-serif;;
+    --main-font: 'Roboto', sans-serif;
+    --radius: 0.3rem;
+
   }
 
   * {
@@ -19,7 +22,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: var(--dark-green);
+    background-color: var(--prussian-blue);
     height: 100%;
     font-family: var(--main-font);
     background-size: auto;
@@ -31,10 +34,10 @@ export const GlobalStyle = createGlobalStyle`
   }
 
 
-  ul{
-    list-style:none;
+  ul {
+    list-style: none;
   }
-  
+
   a {
     text-decoration: none;
     color: inherit;
