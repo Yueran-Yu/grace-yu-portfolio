@@ -1,13 +1,14 @@
 import styled from 'styled-components';
 
 export const NavContainer = styled.div`
-  background-color: var(--dark-green);
+  background-color: #27a227;
   display: flex;
   justify-content: space-between;
   padding: 10px 20px;
   font-size: 14px;
 
   .left-nav {
+
   }
 
   .right-nav ul {
