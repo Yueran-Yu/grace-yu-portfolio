@@ -20,8 +20,8 @@ export const BackToTopContainer = styled.a`
   height: 1.5rem;
   display: grid;
   place-items: center;
-  background: var(--honeydew);
-  color: var(--celadon-blue);
+  background: ${({theme}) => theme.toTopBackground};
+  color: ${({theme}) => theme.toTopColor};
   border-radius: var(--radius);
   animation: ${bounce} 2s ease-in-out infinite;
   visibility: hidden;

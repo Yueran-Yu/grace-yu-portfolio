@@ -1,21 +1,20 @@
 import React from 'react';
 import {LeftNavContainer, MiddleNavContainer, NavContainer, RightNavContainer} from "./nav.styles";
 import {Logo} from "../Logo";
-import {useScrollPosition} from "../../hooks/useScrollPosition";
 import {DayNightSwitchButton} from "../DayNightSwitchButton/DayNightSwitchButton";
 
 export const Nav = ({isDay, themeChange}) => {
-  const navBar = document.getElementById('nav')
-  let scrollHeight = useScrollPosition()
-  if (navBar) {
-    const navHeight = navBar.getBoundingClientRect().height
-    scrollHeight >= navHeight ?
-      navBar.classList.add('fixed-nav') :
-      navBar.classList.remove('fixed-nav')
-  }
+  // const navBar = document.getElementById('nav')
+  // let scrollHeight = useScrollPosition()
+  // if (navBar) {
+  //   const navHeight = navBar.getBoundingClientRect().height
+  //   scrollHeight >= navHeight ?
+  //     navBar.classList.add('fixed-nav') :
+  //     navBar.classList.remove('fixed-nav')
+  // }
 
   return (
-    <NavContainer id='nav'>
+    <NavContainer>
       <LeftNavContainer>
         <Logo/>
       </LeftNavContainer>

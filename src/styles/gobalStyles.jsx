@@ -3,13 +3,19 @@ import {normalize} from 'styled-normalize';
 
 export const lightTheme = {
   bodyColor: '#FFFFFF',
-  fontColor: '#292929',
-  fixedNavColor: '#1b2f50'
+  color: '#1b2f50',
+  fixedNavColor: '#f1faee',
+  toTopColor: '#f1faee',
+  toTopBackground: '#457b9d'
 }
 
 export const darkTheme = {
   bodyColor: '#1b2f50',
-  fontColor: '#f1faee'
+  color: '#f1faee',
+  fixedNavColor: '#457b9d',
+  toTopColor: '#457b9d',
+  toTopBackground: '#f1faee'
+
 }
 
 export const GlobalStyle = createGlobalStyle`
@@ -41,7 +47,7 @@ export const GlobalStyle = createGlobalStyle`
     height: 100%;
     font-family: var(--main-font);
     background-size: auto;
-    color: ${({theme}) => theme.fontColor};
+    color: ${({theme}) => theme.color};
     min-height: 100vh;
     min-height: -webkit-fill-available;
     //background-image: linear-gradient(to bottom, var(--light-green), var(--dark-green));

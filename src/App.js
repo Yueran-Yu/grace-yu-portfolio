@@ -12,7 +12,7 @@ import {ThemeProvider} from "styled-components";
 import {lightTheme, darkTheme} from './styles/gobalStyles'
 
 const App = () => {
-  const [isDay, setTheme] = useState(true)
+  const [isDay, setTheme] = useState(false)
   const scrollPosition = useScrollPosition()
   const toTop = useRef(null)
 
