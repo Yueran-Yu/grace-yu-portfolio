@@ -11,7 +11,8 @@ export const useScrollPosition = () => {
     pageYOffsetChange()
 
     return ()=> window.removeEventListener('scroll', pageYOffsetChange)
-  },[])
+  },[scrollPosition])
+
   return scrollPosition
 };
 

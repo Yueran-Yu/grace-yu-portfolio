@@ -1,4 +1,4 @@
-import {useRef, useState, useContext} from 'react';
+import {useRef, useState} from 'react';
 import {HomePage} from "./components/Home/Home";
 import {Nav} from "./components/Nav/Nav";
 import {AboutPage} from "./components/About/About";
@@ -10,11 +10,9 @@ import {BackToTop} from "./components/BackToTop/BackToTop";
 import {useScrollPosition} from "./hooks/useScrollPosition";
 import {ThemeProvider} from "styled-components";
 import {lightTheme, darkTheme} from './styles/gobalStyles'
-import {ThemeContext, DayNightSwitchProvider} from "./context/DayNightSwitchProvider";
 
 const App = () => {
-  const {theme} = useContext(ThemeContext)
-  console.log(theme)
+  const [isDay, setTheme] = useState(true)
   const scrollPosition = useScrollPosition()
   const toTop = useRef(null)
   if (toTop.current) {
@@ -24,12 +22,10 @@ const App = () => {
   }
 
   return (
-    <DayNightSwitchProvider>
-
-      <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
+      <ThemeProvider theme={isDay? lightTheme : darkTheme}>
         <div className='App'>
           <GlobalStyle/>
-          <Nav/>
+          <Nav isDay={isDay} themeChange={()=>setTheme(!isDay)}/>
           <HomePage/>
           <AboutPage/>
           <Works/>
@@ -39,9 +35,7 @@ const App = () => {
           {/*<img src={process.env.PUBLIC_URL + `/images/image-2.jpg`} alt="img"/>*/}
         </div>
       </ThemeProvider>
-    </DayNightSwitchProvider>
-
-  );
+  )
 }
 
 export default App;

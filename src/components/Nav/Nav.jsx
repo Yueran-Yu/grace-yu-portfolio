@@ -4,7 +4,7 @@ import {Logo} from "../Logo";
 import {useScrollPosition} from "../../hooks/useScrollPosition";
 import {DayNightSwitchButton} from "../DayNightSwitchButton/DayNightSwitchButton";
 
-export const Nav = () => {
+export const Nav = ({isDay, themeChange}) => {
   const navBar = useRef(null)
   let scrollHeight = useScrollPosition()
   if (navBar.current) {
@@ -13,7 +13,6 @@ export const Nav = () => {
       navBar.current.classList.add('fixed-nav') :
       navBar.current.classList.remove('fixed-nav')
   }
-
   return (
     <NavContainer ref={navBar}>
       <LeftNavContainer>
@@ -37,7 +36,7 @@ export const Nav = () => {
       </MiddleNavContainer>
 
       <RightNavContainer>
-        <DayNightSwitchButton />
+        <DayNightSwitchButton isDay={isDay} themeChange={themeChange}/>
       </RightNavContainer>
     </NavContainer>
   )

@@ -1,12 +1,11 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import {SwitchButtonContainer} from "./DayNightSwitchButton.styles";
-import {ThemeContext} from "../../context/DayNightSwitchProvider";
 
-export const DayNightSwitchButton = () => {
-  const {theme, themeToggler} = useContext(ThemeContext)
+export const DayNightSwitchButton = ({isDay, themeChange}) => {
+  const theme = isDay ? 'dark' : 'light'
   return (
-    <SwitchButtonContainer>
-      <div className={`toggle ` + theme} onClick={themeToggler}>
+    <SwitchButtonContainer onClick={themeChange}>
+      <div className={`toggle ` + theme}>
         <div className="notch">
           <div className="crater"/>
           <div className="crater"/>
