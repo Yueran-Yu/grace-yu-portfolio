@@ -3,20 +3,25 @@ import styled from 'styled-components';
 export const NavContainer = styled.div`
   background-color: var(--celadon-blue);
   display: grid;
+  position: sticky;
   grid-template-columns: 7fr 2fr 1fr;
   padding: 10px 20px;
   font-size: 14px;
-  transition: 0.7s;
+  transition: 0.2s;
+  
 
   &.fixed-nav {
-    position: fixed;
+    position: sticky;
+    position: -webkit-sticky;
+
     top: 0;
     left: 0;
     width: 100%;
     background-color: var(--honeydew);
     box-shadow: 0 1px 3px rgb(198, 221, 221);
-    ul > li{
-      color:${({theme})=> theme.fixedNavColor};
+
+    ul > li {
+      color: ${({theme}) => theme.fixedNavColor};
     }
   }
 `
@@ -36,9 +41,9 @@ export const MiddleNavContainer = styled.div`
     li {
       padding: 10px;
       letter-spacing: 1.5px;
-      transition: 0.5s;
+      transition: 0.3s;
       font-weight: 600;
-      color: ${({theme})=> theme.bodyColor};
+      color: ${({theme}) => theme.bodyColor};
     }
   }
 `

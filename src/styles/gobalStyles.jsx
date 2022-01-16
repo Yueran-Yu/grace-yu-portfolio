@@ -48,7 +48,6 @@ export const GlobalStyle = createGlobalStyle`
       //url(${process.env.PUBLIC_URL + `/images/backgroundImage.jpeg`});
   }
 
-
   ul {
     list-style: none;
   }

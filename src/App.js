@@ -15,6 +15,7 @@ const App = () => {
   const [isDay, setTheme] = useState(true)
   const scrollPosition = useScrollPosition()
   const toTop = useRef(null)
+
   if (toTop.current) {
     scrollPosition > 400 ?
       toTop.current.classList.add('show-btn') :
@@ -22,19 +23,19 @@ const App = () => {
   }
 
   return (
-      <ThemeProvider theme={isDay? lightTheme : darkTheme}>
-        <div className='App'>
-          <GlobalStyle/>
-          <Nav isDay={isDay} themeChange={()=>setTheme(!isDay)}/>
-          <HomePage/>
-          <AboutPage/>
-          <Works/>
-          <Contact/>
-          <Footer/>
-          <BackToTop toTopRef={toTop}/>
-          {/*<img src={process.env.PUBLIC_URL + `/images/image-2.jpg`} alt="img"/>*/}
-        </div>
-      </ThemeProvider>
+    <ThemeProvider theme={isDay ? lightTheme : darkTheme}>
+      <div className='App'>
+        <GlobalStyle/>
+        <Nav isDay={isDay} themeChange={() => setTheme(!isDay)}/>
+        <HomePage/>
+        <AboutPage/>
+        <Works/>
+        <Contact/>
+        <Footer/>
+        <BackToTop toTopRef={toTop}/>
+        {/*<img src={process.env.PUBLIC_URL + `/images/image-2.jpg`} alt="img"/>*/}
+      </div>
+    </ThemeProvider>
   )
 }
 
