@@ -11,11 +11,10 @@ const bounce = keyframes`
     transform: scale(1)
   }
 `
-
 export const BackToTopContainer = styled.a`
   font-size: 1rem;
   position: fixed;
-  bottom: 3rem;
+  bottom: 5rem;
   right: 3rem;
   width: 1.5rem;
   height: 1.5rem;
@@ -25,7 +24,13 @@ export const BackToTopContainer = styled.a`
   color: var(--celadon-blue);
   border-radius: var(--radius);
   animation: ${bounce} 2s ease-in-out infinite;
-  visibility: visible;
+  visibility: hidden;
+  z-index: -10;
+  
+  &.show-btn{
+    visibility: visible;
+    z-index: 100;
+  }
 `
 
 

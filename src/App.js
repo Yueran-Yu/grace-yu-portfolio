@@ -1,27 +1,46 @@
+import {useRef, useState, useContext} from 'react';
 import {HomePage} from "./components/Home/Home";
 import {Nav} from "./components/Nav/Nav";
-import {Resume} from "./components/Resume/Resume";
 import {AboutPage} from "./components/About/About";
 import {Footer} from "./components/Footer/Footer";
 import {Works} from "./components/Works/Works";
 import {Contact} from "./components/Contact/Contact";
 import {GlobalStyle} from "./styles/gobalStyles";
 import {BackToTop} from "./components/BackToTop/BackToTop";
+import {useScrollPosition} from "./hooks/useScrollPosition";
+import {ThemeProvider} from "styled-components";
+import {lightTheme, darkTheme} from './styles/gobalStyles'
+import {ThemeContext, DayNightSwitchProvider} from "./context/DayNightSwitchProvider";
 
 const App = () => {
+  const {theme} = useContext(ThemeContext)
+  console.log(theme)
+  const scrollPosition = useScrollPosition()
+  const toTop = useRef(null)
+  if (toTop.current) {
+    scrollPosition > 400 ?
+      toTop.current.classList.add('show-btn') :
+      toTop.current.classList.remove('show-btn')
+  }
+
   return (
-    <div className='App'>
-      <GlobalStyle/>
-      <Nav/>
-      <HomePage/>
-      <AboutPage/>
-      <Works/>
-      <Resume/>
-      <Contact/>
-      <Footer/>
-      <BackToTop/>
-      {/*<img src={process.env.PUBLIC_URL + `/images/image-2.jpg`} alt="img"/>*/}
-    </div>
+    <DayNightSwitchProvider>
+
+      <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
+        <div className='App'>
+          <GlobalStyle/>
+          <Nav/>
+          <HomePage/>
+          <AboutPage/>
+          <Works/>
+          <Contact/>
+          <Footer/>
+          <BackToTop toTopRef={toTop}/>
+          {/*<img src={process.env.PUBLIC_URL + `/images/image-2.jpg`} alt="img"/>*/}
+        </div>
+      </ThemeProvider>
+    </DayNightSwitchProvider>
+
   );
 }
 

@@ -1,42 +1,44 @@
-import React, {useRef, useEffect} from 'react';
-import {NavContainer} from "./nav.styles";
-import {HeadLink} from "./HeadLink";
+import React, {useRef} from 'react';
+import {LeftNavContainer, MiddleNavContainer, NavContainer, RightNavContainer} from "./nav.styles";
 import {Logo} from "../Logo";
 import {useScrollPosition} from "../../hooks/useScrollPosition";
+import {DayNightSwitchButton} from "../DayNightSwitchButton/DayNightSwitchButton";
 
 export const Nav = () => {
   const navBar = useRef(null)
   let scrollHeight = useScrollPosition()
-
-  useEffect(() => {
+  if (navBar.current) {
     const navHeight = navBar.current.getBoundingClientRect().height
-
-  }, [])
+    scrollHeight > navHeight ?
+      navBar.current.classList.add('fixed-nav') :
+      navBar.current.classList.remove('fixed-nav')
+  }
 
   return (
     <NavContainer ref={navBar}>
-      <div className='left-nav'>
+      <LeftNavContainer>
         <Logo/>
-      </div>
-      <div className='right-nav'>
+      </LeftNavContainer>
+      <MiddleNavContainer>
         <ul>
           <li>
-            <HeadLink name={`Home`} offsetValue={-100}/>
+            <a href='#home' className='scroll-link'>Home</a>
           </li>
           <li>
-            <HeadLink name={`About`} offsetValue={-8}/>
+            <a href='#about' className='scroll-link'>About</a>
           </li>
           <li>
-            <HeadLink name={`Work`} offsetValue={-8}/>
+            <a href='#work' className='scroll-link'>Work</a>
           </li>
           <li>
-            <HeadLink name={`Resume`} offsetValue={-8}/>
-          </li>
-          <li>
-            <HeadLink name={`Contact`} offsetValue={-8}/>
+            <a href='#contact' className='scroll-link'>Contact</a>
           </li>
         </ul>
-      </div>
+      </MiddleNavContainer>
+
+      <RightNavContainer>
+        <DayNightSwitchButton />
+      </RightNavContainer>
     </NavContainer>
   )
 }
