@@ -3,15 +3,7 @@ import {LeftNavContainer, MiddleNavContainer, NavContainer, RightNavContainer} f
 import {Logo} from "../Logo";
 import {DayNightSwitchButton} from "../DayNightSwitchButton/DayNightSwitchButton";
 
-const Nav = ({isDay, themeChange}) => {
-  // const navBar = document.getElementById('nav')
-  // let scrollHeight = useScrollPosition()
-  // if (navBar) {
-  //   const navHeight = navBar.getBoundingClientRect().height
-  //   scrollHeight >= navHeight ?
-  //     navBar.classList.add('fixed-nav') :
-  //     navBar.classList.remove('fixed-nav')
-  // }
+export const HamburgerNav= ({isDay, themeChange}) => {
 
   return (
     <NavContainer>
@@ -34,7 +26,6 @@ const Nav = ({isDay, themeChange}) => {
           </li>
         </ul>
       </MiddleNavContainer>
-
       <RightNavContainer>
         <DayNightSwitchButton isDay={isDay} themeChange={themeChange}/>
       </RightNavContainer>
@@ -42,5 +33,3 @@ const Nav = ({isDay, themeChange}) => {
   )
 }
 
-
-export default Nav;

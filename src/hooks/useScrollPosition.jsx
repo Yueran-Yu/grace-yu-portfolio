@@ -12,6 +12,8 @@ export const useScrollPosition = () => {
     pageYOffsetChange()
 
     return () => window.removeEventListener('scroll', pageYOffsetChange)
+
+    // using an empty dependencies array to make sure the effect function is called only once the component(that this hook is called in) is mounted.
   }, [])
 
   return scrollPosition

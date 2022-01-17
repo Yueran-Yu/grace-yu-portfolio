@@ -1,7 +1,7 @@
 import React from 'react';
 import {WorksContainer} from "./Works.styles";
 
-export const Works = () => {
+ const Works = () => {
   return (
     <WorksContainer id='work'>
       <h1>Work Page</h1>
@@ -9,3 +9,4 @@ export const Works = () => {
   );
 };
 
+export default Works;

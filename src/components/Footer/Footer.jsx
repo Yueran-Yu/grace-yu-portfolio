@@ -1,7 +1,7 @@
 import React from 'react';
 import {FooterContainer} from "./Footer.styles";
 
-export const Footer = () => {
+ const Footer = () => {
   const date = new Date().getFullYear()
   return (
     <FooterContainer>
@@ -10,5 +10,7 @@ export const Footer = () => {
       </div>
       <div> social media</div>
     </FooterContainer>
-  );
-};
+  )
+}
+
+export default Footer;

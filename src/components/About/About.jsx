@@ -1,7 +1,7 @@
 import React from 'react';
 import {AboutContainer} from "./About.styles";
 
-export const AboutPage = () => {
+const About = () => {
   return (
     <AboutContainer id='about'>
       <h1>Here I need to know, if the font is suitable</h1>
@@ -9,4 +9,5 @@ export const AboutPage = () => {
   );
 };
 
+export default About;
 

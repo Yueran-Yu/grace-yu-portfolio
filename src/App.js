@@ -1,12 +1,6 @@
 import {useRef, useState} from 'react';
-import {HomePage} from "./components/Home/Home";
-import {Nav} from "./components/Nav/Nav";
-import {AboutPage} from "./components/About/About";
-import {Footer} from "./components/Footer/Footer";
-import {Works} from "./components/Works/Works";
-import {Contact} from "./components/Contact/Contact";
+import {Nav, Home, About, Works, Contact, BackToTop, Footer} from "./components";
 import {GlobalStyle} from "./styles/gobalStyles";
-import {BackToTop} from "./components/BackToTop/BackToTop";
 import {useScrollPosition} from "./hooks/useScrollPosition";
 import {ThemeProvider} from "styled-components";
 import {lightTheme, darkTheme} from './styles/gobalStyles'
@@ -27,8 +21,8 @@ const App = () => {
       <div className='App'>
         <GlobalStyle/>
         <Nav isDay={isDay} themeChange={() => setTheme(!isDay)}/>
-        <HomePage/>
-        <AboutPage/>
+        <Home/>
+        <About/>
         <Works/>
         <Contact/>
         <Footer/>

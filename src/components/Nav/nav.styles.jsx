@@ -55,7 +55,7 @@ export const MiddleNavContainer = styled.div`
         bottom: 0;
         left: 0;
         transform-origin: bottom right;
-        transition: transform 0.25s ease-out;
+        transition: transform 0.35s ease-out;
       }
 
       .scroll-link:hover::after, .scroll-link:focus::after {
