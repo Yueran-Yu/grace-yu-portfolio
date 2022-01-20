@@ -5,7 +5,7 @@ export const lightTheme = {
   bodyColor: '#FFFFFF',
   color: '#1b2f50',
   fixedNavColor: '#f1faee',
-  toTopColor: '#f1faee',
+  toTopColor: '#e8efe8',
   toTopBackground: '#457b9d'
 }
 
@@ -14,8 +14,7 @@ export const darkTheme = {
   color: '#f1faee',
   fixedNavColor: '#457b9d',
   toTopColor: '#457b9d',
-  toTopBackground: '#f1faee'
-
+  toTopBackground: '#e8efe8'
 }
 
 export const GlobalStyle = createGlobalStyle`

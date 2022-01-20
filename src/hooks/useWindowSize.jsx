@@ -3,6 +3,7 @@ import {useState, useEffect} from 'react';
 export const useWindowSize = () => {
   //checking to see if we're on the server
   const isSSR = typeof window !== 'undefined'
+
   const [windowSize, setWindSize] = useState({
     width: isSSR ? 1200 : window.innerWidth,
     height: isSSR ? 800 : window.innerHeight

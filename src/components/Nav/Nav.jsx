@@ -1,7 +1,15 @@
-import React from 'react';
-import {LeftNavContainer, MiddleNavContainer, NavContainer, RightNavContainer} from "./nav.styles";
+import React, {useState} from 'react';
+import {
+  HamburgerIcon,
+  LeftNavContainer,
+  MiddleNavContainer,
+  NavContainer, NavItem, NavLink,
+  NavMenu,
+  RightNavContainer
+} from "./Nav.styles";
 import {Logo} from "../Logo";
 import {DayNightSwitchButton} from "../DayNightSwitchButton/DayNightSwitchButton";
+import {FaBars, FaTimes} from 'react-icons/fa';
 
 const Nav = ({isDay, themeChange}) => {
   // const navBar = document.getElementById('nav')
@@ -12,28 +20,34 @@ const Nav = ({isDay, themeChange}) => {
   //     navBar.classList.add('fixed-nav') :
   //     navBar.classList.remove('fixed-nav')
   // }
+  const [isClick, setClick] = useState(false)
+
+  const handleClick = () => setClick(!isClick)
 
   return (
     <NavContainer>
       <LeftNavContainer>
         <Logo/>
       </LeftNavContainer>
+
       <MiddleNavContainer>
-        <ul>
-          <li>
-            <a href='#home' className='scroll-link'>Home</a>
-          </li>
-          <li>
-            <a href='#about' className='scroll-link'>About</a>
-          </li>
-          <li>
-            <a href='#work' className='scroll-link'>Work</a>
-          </li>
-          <li>
-            <a href='#contact' className='scroll-link'>Contact</a>
-          </li>
-        </ul>
+        <HamburgerIcon onClick={handleClick}>{isClick ? <FaTimes/> : <FaBars/>}</HamburgerIcon>
+        <NavMenu onClick={handleClick} isClick={isClick}>
+          <NavItem>
+            <NavLink to='/home' className='scroll-link'>Home</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink to='/about' className='scroll-link'>About</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink to='/work' className='scroll-link'>Work</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink to='/contact' className='scroll-link'>Contact</NavLink>
+          </NavItem>
+        </NavMenu>
       </MiddleNavContainer>
+
 
       <RightNavContainer>
         <DayNightSwitchButton isDay={isDay} themeChange={themeChange}/>
@@ -41,6 +55,5 @@ const Nav = ({isDay, themeChange}) => {
     </NavContainer>
   )
 }
-
 
 export default Nav;

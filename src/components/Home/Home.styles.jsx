@@ -8,12 +8,12 @@ export const HomeContainer = styled.div`
   justify-content: space-evenly;
 
   div {
-    width: 500px;
+    width: 30vw;
     align-self: center;
   }
-  
+
   .photo img {
-    width: 300px;
+    width: 30vw;
     border-radius: 50%;
   }
 

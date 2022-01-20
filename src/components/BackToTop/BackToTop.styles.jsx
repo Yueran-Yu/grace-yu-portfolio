@@ -26,10 +26,15 @@ export const BackToTopContainer = styled.a`
   animation: ${bounce} 2s ease-in-out infinite;
   visibility: hidden;
   z-index: -10;
-  
-  &.show-btn{
+
+  &.show-btn {
     visibility: visible;
     z-index: 100;
+  }
+
+  &.show-btn:hover {
+    background: ${({theme}) => theme.toTopColor};
+    color: ${({theme}) => theme.toTopBackground };
   }
 `
 
