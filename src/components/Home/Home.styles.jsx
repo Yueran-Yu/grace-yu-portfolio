@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const HomeContainer = styled.div`
-  border: 5px solid green;
   height: 90vh;
   display: flex;
   flex-direction: row;
