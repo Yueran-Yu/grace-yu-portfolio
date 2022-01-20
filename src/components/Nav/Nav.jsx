@@ -11,7 +11,7 @@ import {Logo} from "../Logo";
 import {DayNightSwitchButton} from "../DayNightSwitchButton/DayNightSwitchButton";
 import {FaBars, FaTimes} from 'react-icons/fa';
 
-const Nav = ({isDay, themeChange}) => {
+const Nav = (props) => {
   // const navBar = document.getElementById('nav')
   // let scrollHeight = useScrollPosition()
   // if (navBar) {
@@ -34,23 +34,23 @@ const Nav = ({isDay, themeChange}) => {
         <HamburgerIcon onClick={handleClick}>{isClick ? <FaTimes/> : <FaBars/>}</HamburgerIcon>
         <NavMenu onClick={handleClick} isClick={isClick}>
           <NavItem>
-            <NavLink to='/home' className='scroll-link'>Home</NavLink>
+            <NavLink href='#home' className='scroll-link'>Home</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink to='/about' className='scroll-link'>About</NavLink>
+            <NavLink href='#about' className='scroll-link'>About</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink to='/work' className='scroll-link'>Work</NavLink>
+            <NavLink href='#work' className='scroll-link'>Work</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink to='/contact' className='scroll-link'>Contact</NavLink>
+            <NavLink href='#contact' className='scroll-link'>Contact</NavLink>
           </NavItem>
         </NavMenu>
       </MiddleNavContainer>
 
 
       <RightNavContainer>
-        <DayNightSwitchButton isDay={isDay} themeChange={themeChange}/>
+        <DayNightSwitchButton {...props}/>
       </RightNavContainer>
     </NavContainer>
   )

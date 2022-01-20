@@ -125,7 +125,7 @@ export const NavItem = styled.li`
 
 `
 
-export const NavLink = styled(Link)`
+export const NavLink = styled.a`
   &.scroll-link {
     display: block;
     padding: 6px 8px;
