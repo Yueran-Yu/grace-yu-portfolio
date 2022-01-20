@@ -1,9 +1,14 @@
-import React, {createContext, useContext, useState} from 'react';
+import React, {createContext, useEffect, useContext, useState} from 'react';
 
 export const DayNightThemeContext = createContext(true)
 
 const DayNightThemeProvider = ({children}) => {
-  const [isDark, setTheme] = useState(true)
+  const dark = localStorage.getItem('darkMode')
+  const [isDark, setTheme] = useState(JSON.parse(dark)||true)
+
+  useEffect(()=>{
+    localStorage.setItem('darkMode',  JSON.stringify (isDark))
+  },[isDark])
   const toggleTheme = () => setTheme(!isDark)
 
   return (
