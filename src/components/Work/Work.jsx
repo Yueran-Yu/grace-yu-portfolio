@@ -3,7 +3,7 @@ import {WorkContainer} from "./Work.styles";
 
 const Work = () => {
   return (
-    <WorkContainer>
+    <WorkContainer id='work'>
       <h1>WORK page</h1>
     </WorkContainer>
   );

@@ -10,22 +10,28 @@ import {
 import {Logo} from "../Logo";
 import {DayNightSwitchButton} from "../DayNightSwitchButton/DayNightSwitchButton";
 import {FaBars, FaTimes} from 'react-icons/fa';
+import {deviceSize} from '../Utils/DeviceSize'
 
 const Nav = (props) => {
-  // const navBar = document.getElementById('nav')
-  // let scrollHeight = useScrollPosition()
-  // if (navBar) {
-  //   const navHeight = navBar.getBoundingClientRect().height
-  //   scrollHeight >= navHeight ?
-  //     navBar.classList.add('fixed-nav') :
-  //     navBar.classList.remove('fixed-nav')
-  // }
   const [isClick, setClick] = useState(false)
-
   const handleClick = () => setClick(!isClick)
+  const navBar = document.getElementById('nav')
+  const scrollLinks = document.querySelectorAll('.scroll-link')
+
+  scrollLinks.forEach((link) => {
+    link.addEventListener('click', e => {
+      e.preventDefault()
+      const id = e.currentTarget.getAttribute('href').slice(1)
+      const element = document.getElementById(id)
+      let position = element.offsetTop
+      if (window.innerWidth < deviceSize.tablet) setClick(false)
+      const navHeight = navBar.clientHeight
+      window.scrollTo(0, (position - navHeight))
+    })
+  })
 
   return (
-    <NavContainer>
+    <NavContainer id='nav'>
       <LeftNavContainer>
         <Logo/>
       </LeftNavContainer>
@@ -47,7 +53,6 @@ const Nav = (props) => {
           </NavItem>
         </NavMenu>
       </MiddleNavContainer>
-
 
       <RightNavContainer>
         <DayNightSwitchButton {...props}/>

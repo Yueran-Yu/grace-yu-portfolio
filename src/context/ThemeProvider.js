@@ -4,8 +4,6 @@ export const DayNightThemeContext = createContext(true)
 
 const DayNightThemeProvider = ({children}) => {
   const [isDark, setTheme] = useState(localStorage.getItem('darkMode') === 'true')
-  console.log("$$$$$$$$")
-  console.log(isDark)
 
   useEffect(()=>{
     localStorage.setItem('darkMode',  JSON.stringify(isDark))

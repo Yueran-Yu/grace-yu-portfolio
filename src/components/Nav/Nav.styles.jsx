@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import {deviceSize} from "../Utils/DeviceSize";
-import {Link} from "react-router-dom";
 
 export const NavContainer = styled.div`
   background-color: ${({theme}) => theme.fixedNavColor};
@@ -8,7 +7,7 @@ export const NavContainer = styled.div`
   display: grid;
   position: sticky;
   position: -webkit-sticky;
-  grid-template-columns: 7fr 2fr 1fr;
+  grid-template-columns: 8fr 2.5fr 1fr;
   padding: 10px;
   font-size: 14px;
   transition: 0.2s;
@@ -33,46 +32,7 @@ export const LeftNavContainer = styled.div`
 `
 
 export const MiddleNavContainer = styled.div`
-  // ul {
-  //   display: flex;
-  //   height: 50px;
-  //
-  //   li {
-  //     align-self: center;
-  //     letter-spacing: 1.5px;
-  //     transition: 0.3s;
-  //     font-weight: 600;
-  //     margin: 2px;
-    //     color: ${({theme}) => theme.color};
-  //
-  //     .scroll-link {
-  //       display: block;
-  //       margin: 0 6px;
-  //       padding: 6px;
-  //       cursor: pointer;
-  //       position: relative;
-  //     }
-  //
-  //     .scroll-link::after {
-  //       content: '';
-  //       position: absolute;
-  //       width: 100%;
-  //       background-color: var(--prussian-blue);
-  //       transform: scaleX(0);
-  //       height: 3px;
-  //       bottom: 0;
-  //       left: 0;
-  //       transform-origin: bottom right;
-  //       transition: transform 0.35s ease-out;
-  //     }
-  //
-  //     .scroll-link:hover::after, .scroll-link:focus::after {
-  //       transform: scaleX(1);
-  //       transform-origin: bottom left;
-  //     }
-  //   }
-  // }
-}
+
 `
 
 export const HamburgerIcon = styled.div`
@@ -91,7 +51,9 @@ export const HamburgerIcon = styled.div`
 `
 
 export const NavMenu = styled.ul`
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 10px;
   margin: 12px 0;
   align-items: center;
   text-align: center;
@@ -104,9 +66,9 @@ export const NavMenu = styled.ul`
     left: ${({isClick}) => (isClick ? 0 : '-100%')};
     width: 100%;
     height: 100vh;
-    opacity: 1;
     transition: all 0.5s ease;
-    background: #7884a0;
+    background: #a4b9ea;
+    opacity: 0.5;
   }
 `
 
