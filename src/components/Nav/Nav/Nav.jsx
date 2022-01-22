@@ -6,9 +6,10 @@ import {
   MenuContainer
 } from "./Nav.styles";
 import {Logo} from "../../Logo";
-import {deviceSize} from '../../Utils/DeviceSize'
+import {deviceSize, size} from '../../Utils/DeviceSize'
 import ToggleBtn from "../ToggleBtn/ToggleBtn";
 import MenuList from "../MenuList/MenuList";
+import {useWindowSize} from "../../../hooks/useWindowSize";
 
 const menuVariants = {
   open: {
@@ -20,16 +21,16 @@ const menuVariants = {
 }
 
 const menuTransition = {
-  type: 'tween',
   duration: 0.2,
   delay: 0.1
 }
 
 const Nav = (props) => {
-  const [isOpen, setOpen] = useState(true)
+  const [isOpen, setOpen] = useState(false)
   const handleClick = () => setOpen(!isOpen)
   const navBar = document.getElementById('nav')
   const scrollLinks = document.querySelectorAll('.scroll-link')
+  const {width} = useWindowSize()
 
   scrollLinks.forEach((link) => {
     link.addEventListener('click', e => {
@@ -48,18 +49,21 @@ const Nav = (props) => {
       <LeftNavContainer>
         <Logo/>
       </LeftNavContainer>
+      <ToggleBtn toggle={handleClick} isOpen={isOpen}/>
       <RightNavContainer>
-        <ToggleBtn toggle={handleClick} isOpen={isOpen}/>
-        <MenuContainer
-          initial={false}
-          animate={isOpen ? 'open' : 'closed'}
-          variants={menuVariants}
-          transition={menuTransition}
-        >
-          <MenuList setOpen={setOpen}  {...props}/>
-        </MenuContainer>
+        {
+          width <= size.tablet ?
+            <MenuContainer initial={false}
+                           animate={isOpen ? 'open' : 'closed'}
+                           variants={menuVariants}
+                           transition={menuTransition}>
+              <MenuList setOpen={setOpen} {...props}/>
+            </MenuContainer> :
+            <MenuList {...props}/>
+        }
       </RightNavContainer>
     </NavContainer>
+
   )
 }
 

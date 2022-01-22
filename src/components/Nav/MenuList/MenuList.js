@@ -1,11 +1,15 @@
 import React from 'react';
 import {NavLink, NavItem, MenuListContainer} from "./MenuList.styles";
 import {DayNightSwitchButton} from "../../DayNightSwitchButton/DayNightSwitchButton";
+import {useWindowSize} from "../../../hooks/useWindowSize";
+import {size} from "../../Utils/DeviceSize";
 
 const MenuList = (props) => {
-  const {setOpen} = props;
-  return (
-    <MenuListContainer onClick={() => setOpen(false)}>
+  const {setOpen} = props
+  const {width} = useWindowSize()
+
+  const Items = () => (
+    <>
       <NavItem>
         <NavLink href='#home' className='scroll-link'>Home</NavLink>
       </NavItem>
@@ -18,11 +22,27 @@ const MenuList = (props) => {
       <NavItem>
         <NavLink href='#contact' className='scroll-link'>Contact</NavLink>
       </NavItem>
-      <NavItem>
-        <DayNightSwitchButton {...props}/>
-      </NavItem>
-    </MenuListContainer>
-  );
-};
+      {/*<NavItem>*/}
+      {/*  {width <= size.tablet ? <div>Night/Day</div> : <DayNightSwitchButton {...props}/>}*/}
+      {/*</NavItem>*/}
+      <DayNightSwitchButton {...props}/>
+    </>
+  )
+
+  return (
+    <>
+      {
+        width <= size.tablet ?
+          (<MenuListContainer onClick={() => setOpen(false)}>
+            <Items/>
+          </MenuListContainer>) :
+          (<MenuListContainer>
+            <Items/>
+          </MenuListContainer>)
+      }
+    </>
+
+  )
+}
 
 export default MenuList;

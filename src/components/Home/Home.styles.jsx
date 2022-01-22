@@ -5,6 +5,7 @@ export const HomeContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  border: 1px solid green;
 
   div {
     width: 30vw;
