@@ -56,7 +56,7 @@ const Nav = (props) => {
           variants={menuVariants}
           transition={menuTransition}
         >
-          <MenuList isOpen={isOpen} {...props}/>
+          <MenuList setOpen={setOpen}  {...props}/>
         </MenuContainer>
       </RightNavContainer>
     </NavContainer>

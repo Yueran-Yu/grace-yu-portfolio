@@ -3,9 +3,9 @@ import {NavLink, NavItem, MenuListContainer} from "./MenuList.styles";
 import {DayNightSwitchButton} from "../../DayNightSwitchButton/DayNightSwitchButton";
 
 const MenuList = (props) => {
-  const isOpen = props.isOpen;
+  const {setOpen} = props;
   return (
-    <MenuListContainer>
+    <MenuListContainer onClick={() => setOpen(false)}>
       <NavItem>
         <NavLink href='#home' className='scroll-link'>Home</NavLink>
       </NavItem>

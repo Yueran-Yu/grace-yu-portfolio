@@ -16,9 +16,8 @@ export const MenuListContainer = styled.ul`
     position: absolute;
     width: 50%;
     height: 100vh;
-    top: 0;
+    top: 100px;
     right: 0;
-    background-color: yellow;
     transition: all 0.5s ease;
   }
 `

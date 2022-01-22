@@ -37,7 +37,7 @@ export const RightNavContainer = styled.div`
 `
 
 export const MenuContainer = styled(motion.div)`
-  display: none;
+  display: flex;
 
   @media screen and ${deviceSize.tablet} {
     display: flex;
