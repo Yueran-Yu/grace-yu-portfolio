@@ -11,11 +11,7 @@ const App = () => {
   const scrollPosition = useScrollPosition()
   const {isDark, toggleTheme} = useDayNightTheme()
   const {isOpen, setOpen, toggleOpenClose} = useOpenClose()
-  console.log('%%%%%%%%')
-  console.log(isOpen)
-
   const toTop = useRef(null)
-
   if (toTop.current) {
     scrollPosition >= 400 ?
       toTop.current.classList.add('show-btn') :

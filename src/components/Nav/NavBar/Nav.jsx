@@ -22,7 +22,7 @@ const menuVariants = {
 }
 
 const menuTransition = {
-  duration: 0.2,
+  duration: 0.3,
   delay: 0.1
 }
 

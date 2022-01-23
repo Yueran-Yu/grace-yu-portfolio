@@ -18,6 +18,7 @@ export const NavContainer = styled.div`
 export const LeftNavContainer = styled.div`
   width: 50px;
   height: 50px;
+  cursor: pointer;
 
   .logo {
     width: 100%;
@@ -29,19 +30,19 @@ export const LeftNavContainer = styled.div`
     width: 40px;
     height: 40px;
     align-self: center;
+    cursor: pointer;
   }
 `
 
 export const RightNavContainer = styled.div`
-  
 
 `
 
 export const MenuContainer = styled(motion.div)`
-
+  width: 100%;
+  height: 100%;
 
   @media screen and ${deviceSize.tablet} {
-    display: block;
     min-width: 300px;
     width: 100%;
     height: 100%;
@@ -51,8 +52,7 @@ export const MenuContainer = styled(motion.div)`
     z-index: 1989;
     transform: translateX(100%);
     user-select: none;
-
-    background-color: rgba(57, 48, 48, 0.15);
+    background-color: rgb(48, 51, 57, 0.10);
     backdrop-filter: blur(5px);
   }
 

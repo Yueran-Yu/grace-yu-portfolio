@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import {deviceSize} from "../../Utils/DeviceSize";
 import {Link} from 'react-scroll';
+import {motion} from "framer-motion";
 
 export const MenuListContainer = styled.ul`
   display: grid;
@@ -9,30 +10,37 @@ export const MenuListContainer = styled.ul`
   margin: 12px;
   align-items: center;
   text-align: center;
-
-
+  
   @media screen and ${deviceSize.tablet} {
     display: flex;
     flex-direction: column;
     position: fixed;
-    width: 50%;
-    height: 100vh;
+    width: 35%;
+    height: 50%;
     z-index: 1989;
-    top: 100px;
-    right: 0;
+    top: 60px;
+    right: 10%;
+    min-width: 240px;
+    max-width: 600px;
     transition: all 0.5s ease;
   }
 `
 
-export const NavItem = styled.li`
+export const NavItem = styled(motion.li)`
+
   align-self: center;
   letter-spacing: 1.5px;
   transition: 0.3s;
   font-weight: 600;
+  cursor: pointer;
   color: ${({theme}) => theme.chosenTheme.color};
 
   @media screen and ${deviceSize.tablet} {
+    padding-top: 20px;
     height: 60px;
+    font-size: 20px;
+    width: 100%;
+    cursor: pointer;
   }
 `
 

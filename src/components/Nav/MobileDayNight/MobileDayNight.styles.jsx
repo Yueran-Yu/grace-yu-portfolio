@@ -1,0 +1,25 @@
+import styled from 'styled-components';
+
+export const MobileDayNightContainer = styled.div`
+  .outside {
+    width: 100%;
+    height: 30px;
+    padding: 5px 0;
+    line-height: 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    box-shadow: rgba(0, 0, 0, 0.16) 0 3px 6px, rgba(0, 0, 0, 0.23) 0 3px 6px;
+  }
+
+  .outside:hover, .outside:focus, .outside:active {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+`
