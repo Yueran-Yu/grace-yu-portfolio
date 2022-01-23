@@ -5,7 +5,8 @@ export const HomeContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  border: 1px solid green;
+  position: relative;
+  z-index: -2;
 
   div {
     width: 30vw;

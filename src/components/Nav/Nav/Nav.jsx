@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {
   NavContainer,
   LeftNavContainer,
@@ -6,10 +6,11 @@ import {
   MenuContainer
 } from "./Nav.styles";
 import {Logo} from "../../Logo";
-import {deviceSize, size} from '../../Utils/DeviceSize'
+import {size} from '../../Utils/DeviceSize'
 import ToggleBtn from "../ToggleBtn/ToggleBtn";
 import MenuList from "../MenuList/MenuList";
 import {useWindowSize} from "../../../hooks/useWindowSize";
+import {useOpenClose} from "../../../context/OpenCloseProvider";
 
 const menuVariants = {
   open: {
@@ -26,30 +27,14 @@ const menuTransition = {
 }
 
 const Nav = (props) => {
-  const [isOpen, setOpen] = useState(false)
-  const handleClick = () => setOpen(!isOpen)
-  const navBar = document.getElementById('nav')
-  const scrollLinks = document.querySelectorAll('.scroll-link')
+  const {isOpen, setOpen, toggleOpenClose} = props
   const {width} = useWindowSize()
-
-  scrollLinks.forEach((link) => {
-    link.addEventListener('click', e => {
-      e.preventDefault()
-      const id = e.currentTarget.getAttribute('href').slice(1)
-      const element = document.getElementById(id)
-      let position = element.offsetTop
-      if (window.innerWidth < deviceSize.tablet) setOpen(false)
-      const navHeight = navBar.clientHeight
-      window.scrollTo(0, (position - navHeight))
-    })
-  })
-
   return (
     <NavContainer id='nav'>
       <LeftNavContainer>
         <Logo/>
       </LeftNavContainer>
-      <ToggleBtn toggle={handleClick} isOpen={isOpen}/>
+      <ToggleBtn toggle={toggleOpenClose} isOpen={isOpen}/>
       <RightNavContainer>
         {
           width <= size.tablet ?
@@ -63,7 +48,6 @@ const Nav = (props) => {
         }
       </RightNavContainer>
     </NavContainer>
-
   )
 }
 

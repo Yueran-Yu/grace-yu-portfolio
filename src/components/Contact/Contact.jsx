@@ -1,10 +1,10 @@
 import React from 'react';
 import {ContactContainer} from "./Contact.styles";
 
- const Contact = () => {
+const Contact = () => {
   return (
     <ContactContainer id='contact'>
-     <h1>Contact Page</h1>
+      <h1>Contact Page</h1>
     </ContactContainer>
   )
 }

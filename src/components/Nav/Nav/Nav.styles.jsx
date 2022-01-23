@@ -3,7 +3,7 @@ import {deviceSize} from "../../Utils/DeviceSize";
 import {motion} from "framer-motion";
 
 export const NavContainer = styled.div`
-  background-color: ${({theme}) => theme.fixedNavColor};
+  background-color: ${({theme}) => theme.chosenTheme.fixedNavColor};
   top: 0;
   display: grid;
   position: sticky;
@@ -33,24 +33,26 @@ export const LeftNavContainer = styled.div`
 `
 
 export const RightNavContainer = styled.div`
-  display: flex;
+  
+
 `
 
 export const MenuContainer = styled(motion.div)`
 
+
   @media screen and ${deviceSize.tablet} {
-    display: flex;
+    display: block;
     min-width: 300px;
     width: 100%;
     height: 100%;
-    color: green;
     position: fixed;
     top: 0;
     right: 0;
     z-index: 1989;
     transform: translateX(100%);
     user-select: none;
-    background-color: rgba(255, 255, 255, .15);
+
+    background-color: rgba(57, 48, 48, 0.15);
     backdrop-filter: blur(5px);
   }
 

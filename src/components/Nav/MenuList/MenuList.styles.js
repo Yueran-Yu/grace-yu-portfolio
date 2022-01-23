@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import {deviceSize} from "../../Utils/DeviceSize";
+import {Link} from 'react-scroll';
 
 export const MenuListContainer = styled.ul`
   display: grid;
@@ -13,9 +14,10 @@ export const MenuListContainer = styled.ul`
   @media screen and ${deviceSize.tablet} {
     display: flex;
     flex-direction: column;
-    position: absolute;
+    position: fixed;
     width: 50%;
     height: 100vh;
+    z-index: 1989;
     top: 100px;
     right: 0;
     transition: all 0.5s ease;
@@ -27,17 +29,14 @@ export const NavItem = styled.li`
   letter-spacing: 1.5px;
   transition: 0.3s;
   font-weight: 600;
-  color: ${({theme}) => theme.color};
+  color: ${({theme}) => theme.chosenTheme.color};
 
   @media screen and ${deviceSize.tablet} {
-    color: #282c34;
     height: 60px;
-
   }
-
 `
 
-export const NavLink = styled.a`
+export const NavLink = styled(Link)`
   &.scroll-link {
     display: block;
     padding: 6px 8px;

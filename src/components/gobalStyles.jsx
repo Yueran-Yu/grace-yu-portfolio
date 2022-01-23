@@ -1,5 +1,6 @@
 import {createGlobalStyle} from 'styled-components';
 import {normalize} from 'styled-normalize';
+import {deviceSize} from "./Utils/DeviceSize";
 
 export const lightTheme = {
   bodyColor: '#FFFFFF',
@@ -42,15 +43,19 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: ${({theme}) => theme.bodyColor};
+    background-color: ${({theme: {chosenTheme}}) => chosenTheme.bodyColor};
     height: 100%;
     font-family: var(--main-font);
     background-size: auto;
-    color: ${({theme}) => theme.color};
+    color: ${({theme: {chosenTheme}}) => chosenTheme.color};
     min-height: 100vh;
     min-height: -webkit-fill-available;
     //background-image: linear-gradient(to bottom, var(--light-green), var(--dark-green));
       //url(${process.env.PUBLIC_URL + `/images/backgroundImage.jpeg`});
+
+    @media screen and ${deviceSize.tablet} {
+      overflow-y: ${({theme: {isOpen}}) => (isOpen ? 'hidden' : 'visible')};
+    }
   }
 
   ul {

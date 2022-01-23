@@ -1,4 +1,5 @@
 import styled, {keyframes} from 'styled-components';
+import {deviceSize} from "../Utils/DeviceSize";
 
 const bounce = keyframes`
   0% {
@@ -20,21 +21,35 @@ export const BackToTopContainer = styled.a`
   height: 1.5rem;
   display: grid;
   place-items: center;
-  background: ${({theme}) => theme.toTopBackground};
-  color: ${({theme}) => theme.toTopColor};
+  background: ${({theme: {chosenTheme}}) => chosenTheme.toTopBackground};
+  color: ${({theme: {chosenTheme}}) => chosenTheme.toTopColor};
   border-radius: var(--radius);
   animation: ${bounce} 2s ease-in-out infinite;
   visibility: hidden;
   z-index: -10;
 
+
   &.show-btn {
     visibility: visible;
-    z-index: 100;
+    z-index: 10;
   }
 
   &.show-btn:hover {
-    background: ${({theme}) => theme.toTopColor};
-    color: ${({theme}) => theme.toTopBackground };
+    background: ${({theme: {chosenTheme}}) => chosenTheme.toTopColor};
+    color: ${({theme: {chosenTheme}}) => chosenTheme.toTopBackground};
+  }
+
+  @media screen and ${deviceSize.tablet} {
+    visibility: hidden;
+    z-index: -3;
+    &.show-btn {
+      visibility: ${({theme: {isOpen}}) => (isOpen ? 'hidden' : 'visible')};
+    }
+
+    &.show-btn:hover {
+      background: ${({theme: {chosenTheme}}) => chosenTheme.toTopColor};
+      color: ${({theme: {chosenTheme}}) => chosenTheme.toTopBackground};
+    }
   }
 `
 
