@@ -15,8 +15,7 @@ export const ToggleButton = styled.div`
     font-size: 24px;
     cursor: pointer;
     align-self: center;
-    z-index: 1990;
+    z-index: 10000;
   }
-
 `
 

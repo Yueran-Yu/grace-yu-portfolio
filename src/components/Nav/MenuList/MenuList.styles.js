@@ -17,7 +17,7 @@ export const MenuListContainer = styled.ul`
     position: fixed;
     width: 35%;
     height: 50%;
-    z-index: 1989;
+    z-index: 9999;;
     top: 60px;
     right: 10%;
     min-width: 240px;

@@ -13,6 +13,7 @@ export const NavContainer = styled.div`
   font-size: 14px;
   transition: 0.2s;
   box-shadow: 0 1px 3px rgb(198, 221, 221);
+  z-index: 9999;
 `
 
 export const LeftNavContainer = styled.div`
@@ -35,7 +36,8 @@ export const LeftNavContainer = styled.div`
 `
 
 export const RightNavContainer = styled.div`
-
+  position: relative;
+  z-index: 9999;
 `
 
 export const MenuContainer = styled(motion.div)`
@@ -49,7 +51,7 @@ export const MenuContainer = styled(motion.div)`
     position: fixed;
     top: 0;
     right: 0;
-    z-index: 1989;
+    z-index: 9999;
     transform: translateX(100%);
     user-select: none;
     background-color: rgb(48, 51, 57, 0.10);
