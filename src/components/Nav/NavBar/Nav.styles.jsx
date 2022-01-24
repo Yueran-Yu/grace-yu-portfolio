@@ -3,7 +3,7 @@ import {deviceSize} from "../../Utils/DeviceSize";
 import {motion} from "framer-motion";
 
 export const NavContainer = styled.div`
-  background-color: ${({theme}) => theme.chosenTheme.fixedNavColor};
+  background: linear-gradient(to right, ${({theme: {chosenTheme}}) => chosenTheme.bodyColor2} 35%, ${({theme: {chosenTheme}}) => chosenTheme.bodyColor3});
   top: 0;
   display: grid;
   position: sticky;
@@ -12,8 +12,8 @@ export const NavContainer = styled.div`
   padding: 10px;
   font-size: 14px;
   transition: 0.2s;
-  box-shadow: 0 1px 3px rgb(198, 221, 221);
   z-index: 9999;
+  box-shadow: rgb(132, 133, 136, 0.3) 0 1px 4px 0;
 `
 
 export const LeftNavContainer = styled.div`

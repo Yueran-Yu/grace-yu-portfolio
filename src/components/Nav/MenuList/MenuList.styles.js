@@ -10,7 +10,7 @@ export const MenuListContainer = styled.ul`
   margin: 12px;
   align-items: center;
   text-align: center;
-  
+
   @media screen and ${deviceSize.tablet} {
     display: flex;
     flex-direction: column;
@@ -56,7 +56,7 @@ export const NavLink = styled(Link)`
     content: '';
     position: absolute;
     width: 100%;
-    background-color: var(--prussian-blue);
+    background-color: ${({theme: {chosenTheme}}) => (chosenTheme.navHover)};
     transform: scaleX(0);
     height: 3px;
     bottom: 0;

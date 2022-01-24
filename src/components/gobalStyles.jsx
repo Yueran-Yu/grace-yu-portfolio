@@ -3,16 +3,26 @@ import {normalize} from 'styled-normalize';
 import {deviceSize} from "./Utils/DeviceSize";
 
 export const lightTheme = {
-  bodyColor: '#FFFFFF',
-  color: '#1b2f50',
+  bodyColor1: 'white',
+  bodyColor2: 'ghostwhite',
+  bodyColor3: 'azure',
+  navHover: '#133467',
+  color: '#133467',
   fixedNavColor: '#f1faee',
   toTopColor: '#e8efe8',
+  nightBackground: '#133467',
+  nightModeColor: 'ghostwhite',
   toTopBackground: '#457b9d'
 }
 
 export const darkTheme = {
-  bodyColor: '#1b2f50',
-  color: '#f1faee',
+  bodyColor1: '#030f20',
+  bodyColor2: '#295496',
+  bodyColor3: '#133467',
+  navHover: 'ghostwhite',
+  color: 'ghostwhite',
+  nightBackground: 'ghostwhite',
+  nightModeColor: '#133467',
   fixedNavColor: '#457b9d',
   toTopColor: '#457b9d',
   toTopBackground: '#e8efe8'
@@ -21,6 +31,8 @@ export const darkTheme = {
 export const GlobalStyle = createGlobalStyle`
   ${normalize}
   :root {
+    --dark-blue: #030f20;
+    --second-dark-blue: #062e5b;
     --prussian-blue: #1b2f50;
     --celadon-blue: #457b9d;
     --powder-blue: #A8DADC;
@@ -43,7 +55,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: ${({theme: {chosenTheme}}) => chosenTheme.bodyColor};
+    background: linear-gradient(135deg, ${({theme: {chosenTheme}}) => chosenTheme.bodyColor2}, ${({theme: {chosenTheme}}) => chosenTheme.bodyColor1});
     height: 100%;
     font-family: var(--main-font);
     background-size: auto;
