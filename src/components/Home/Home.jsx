@@ -11,7 +11,6 @@ const Home = () => {
           <button>Resume</button>
         </a>
       </div>
-
       <div className='photo'>
         <Image imageName={`photo`}/>
       </div>
