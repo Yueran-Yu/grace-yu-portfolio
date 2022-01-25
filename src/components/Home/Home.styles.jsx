@@ -95,7 +95,7 @@ export const HomeContainer = styled.div`
 
   .photo:hover {
     transform: scale(1.02);
-    background-color: ${({theme: {chosenTheme}}) => (chosenTheme.color)};
+    background-color: ${({theme: {chosenTheme}}) => (chosenTheme.imgBg)};
     box-shadow: rgba(0, 0, 0, 0.25) 0 14px 28px, rgba(0, 0, 0, 0.22) 0 10px 10px;
 
 
@@ -155,7 +155,7 @@ export const HelloText = styled.p`
 `
 
 export const SelfText = styled.p`
-  margin: 20px 10px;
+  margin: 20px;
   font-size: ${({theme: {fontSize}}) => (fontSize.xLarge)};
 
 
@@ -176,10 +176,17 @@ export const SocialMedia = styled.ul`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
 `
 export const MediaItem = styled.li`
   margin: 15px 10px;
-  font-size: ${({theme: {fontSize}}) => (fontSize.large)};
+  font-size: ${({theme: {fontSize}}) => (fontSize.xLarge)};
+
+
+  @media screen and ${deviceSize.mobile} {
+    font-size: ${({theme: {fontSize}}) => (fontSize.middle)};
+  }
+
   &:hover {
     transform: scale(1.05);
   }
