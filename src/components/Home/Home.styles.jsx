@@ -1,47 +1,49 @@
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
 import {deviceSize} from "../Utils/DeviceSize";
+import {CustomBtnContainer} from "../CustomBtn/CustomBtn.styles";
+
+const backAnimation = keyframes`
+  0% {
+    background-position: left;
+  }
+
+  100% {
+    background-position: right;
+  }
+`
 
 export const HomeContainer = styled.div`
+  margin-top: 5vh;
   position: relative;
-  height: 90vh;
+  height: 35vh;
   display: grid;
-  margin: 0 60px;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
   justify-items: center;
   align-content: center;
 
   @media screen and ${deviceSize.tablet} {
-    padding-top: 30px;
-    height: 60vh;
+    margin-top: 5vh;
+    height: 35vh;
     gap: 10px;
-    margin: 0 40px;
+    justify-content: center;
+    align-items: center;
   }
 
-
   @media screen and ${deviceSize.mobile} {
-    padding-top: 30px;
-    height: 50vh;
+    margin-top: 5vh;
     display: grid;
+    height: 57vh;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 10px;
-    justify-items: center;
-    align-content: center;
+    justify-content: center;
+    align-items: center;
 
     .photo {
       grid-row-start: 1;
       grid-row-end: 2;
     }
-  }
-
-
-  div {
-    width: 30vw;
-    align-self: center;
-    position: relative;
-    padding: 10px;
-
   }
 
   .photo {
@@ -106,5 +108,79 @@ export const HomeContainer = styled.div`
       width: 160px;
       height: 160px;
     }
+  }
+`
+
+export const SelfIntroduction = styled.div`
+  text-align: center;
+  margin: 20px 0;
+
+
+
+`
+
+export const MyName = styled.h2`
+  margin: 20px 0;
+  font-size: 65px;
+  font-family: Impact, fantasy;
+  text-transform: uppercase;
+  background-image: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 500%;
+  background-position: left;
+  transition: background-position 1s;
+  animation: ${backAnimation} 20s infinite alternate;
+  text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.1);
+
+  @media screen and ${deviceSize.tablet} {
+    font-size: 55px;
+  }
+
+  @media screen and ${deviceSize.mobile} {
+    font-size: 45px;
+  }
+
+`
+
+export const HelloText = styled.p`
+  font-size: 25px;
+  @media screen and ${deviceSize.tablet} {
+    font-size: 20px;
+  }
+
+  @media screen and ${deviceSize.mobile} {
+    font-size: 15px;
+  }
+`
+
+export const SelfText = styled.p`
+  margin: 20px 10px;
+  font-size: ${({theme: {fontSize}}) => (fontSize.xLarge)};
+
+
+  @media screen and ${deviceSize.tablet} {
+    font-size: ${({theme: {fontSize}}) => (fontSize.large)};
+  }
+
+  @media screen and ${deviceSize.mobile} {
+    font-size: ${({theme: {fontSize}}) => (fontSize.middle)};
+  }
+`
+
+export const ResumeBtn = styled(CustomBtnContainer)`
+  font-size: ${({theme: {fontSize}}) => (fontSize.small)};
+`
+
+export const SocialMedia = styled.ul`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+`
+export const MediaItem = styled.li`
+  margin: 15px 10px;
+  font-size: ${({theme: {fontSize}}) => (fontSize.large)};
+  &:hover {
+    transform: scale(1.05);
   }
 `

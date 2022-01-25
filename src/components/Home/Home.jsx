@@ -1,20 +1,39 @@
 import React from 'react';
-import {HomeContainer} from "./Home.styles";
+import {
+  HelloText,
+  HomeContainer,
+  MediaItem,
+  MyName,
+  ResumeBtn,
+  SelfIntroduction,
+  SelfText,
+  SocialMedia
+} from "./Home.styles";
 import {Image} from "../Image";
+import {FaBlog, FaGithubSquare, FaLinkedin, FaTwitterSquare} from "react-icons/fa";
 
 const Home = () => {
   return (
     <HomeContainer id='home'>
       <div className='photo'>
         <Image imageName={`photo`}/>
+        {/*<img src={require('./image/photo.webp')} alt='avatar'/>*/}
       </div>
-      <div className='self-introduction'>
-        <h2>I'm a front end web developer 😜`</h2>
-        <a href={process.env.PUBLIC_URL + "Grace_Yu_Resume.pdf"} download='Grace_Yu_Resume.pdf'>
-          <button>Resume</button>
-        </a>
-      </div>
+      <SelfIntroduction>
+        <HelloText>Hello everyone👋, I'm</HelloText>
+        <MyName>Grace Yu</MyName>
+        <SelfText>I'm a persistent and life-long learning front end web developer</SelfText>
+        <ResumeBtn href={process.env.PUBLIC_URL + "Grace_Yu_Resume.pdf"}
+                   download='Grace_Yu_Resume.pdf'>Resume</ResumeBtn>
+        <SocialMedia>
+          <MediaItem><FaTwitterSquare/></MediaItem>
+          <MediaItem><FaGithubSquare/></MediaItem>
+          <MediaItem><FaLinkedin/></MediaItem>
+          <MediaItem><FaBlog/></MediaItem>
+        </SocialMedia>
+      </SelfIntroduction>
     </HomeContainer>
   )
 }
+
 export default Home;

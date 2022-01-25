@@ -2,6 +2,14 @@ import {createGlobalStyle} from 'styled-components';
 import {normalize} from 'styled-normalize';
 import {deviceSize} from "./Utils/DeviceSize";
 
+export const fontSize = {
+  small: '1.1rem',
+  middle: '1.4rem',
+  large: '1.6rem',
+  xLarge: '1.8rem',
+  xxLarge: '2rem'
+}
+
 export const lightTheme = {
   bodyColor1: 'white',
   bodyColor2: 'ghostwhite',
@@ -31,6 +39,12 @@ export const darkTheme = {
 export const GlobalStyle = createGlobalStyle`
   ${normalize}
   :root {
+    --gradient: linear-gradient(135deg,
+    #845ec2,
+    #d65db1,
+    #ff6f91,
+    #ffc75f);
+
     --dark-blue: #030f20;
     --second-dark-blue: #062e5b;
     --prussian-blue: #1b2f50;
@@ -38,6 +52,8 @@ export const GlobalStyle = createGlobalStyle`
     --powder-blue: #A8DADC;
     --honeydew: #f1faee;
     --imperial-red: #E63946;
+    --ghostwhite: ghostwhite;
+    --azure: azure;
     --white: #FFFFFF;
     --font-color: #292929;
     --main-font: 'Roboto', sans-serif;

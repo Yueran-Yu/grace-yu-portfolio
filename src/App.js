@@ -1,6 +1,6 @@
 import {useRef} from 'react';
 import {Nav, Home, About, Work, Contact, BackToTop, Footer} from "./components";
-import {GlobalStyle} from "./components/gobalStyles";
+import {fontSize, GlobalStyle} from "./components/gobalStyles";
 import {useScrollPosition} from "./hooks/useScrollPosition";
 import {ThemeProvider} from "styled-components";
 import {lightTheme, darkTheme} from './components/gobalStyles'
@@ -21,7 +21,7 @@ const App = () => {
   const chosenTheme = isDark ? darkTheme : lightTheme
 
   return (
-    <ThemeProvider theme={{chosenTheme, isOpen}}>
+    <ThemeProvider theme={{chosenTheme, fontSize, isOpen}}>
       <GlobalStyle/>
       <Nav isDark={isDark}
            themeChange={toggleTheme}
@@ -34,7 +34,6 @@ const App = () => {
       <Contact/>
       <BackToTop toTopRef={toTop}/>
       <Footer/>
-      {/*<img src={process.env.PUBLIC_URL + `/images/image-2.jpg`} alt="img"/>*/}
     </ThemeProvider>
   )
 }

@@ -34,7 +34,7 @@ const MenuList = (props) => {
                   show:
                     {
                       ...variants.show,
-                      transition: {delay: 0.3, duration: 0.3}
+                      transition: {delay: 0.2, duration: 0.2}
                     },
                   hide: {
                     ...variants.hide,
@@ -51,7 +51,7 @@ const MenuList = (props) => {
                   show:
                     {
                       ...variants.show,
-                      transition: {delay: 0.4, duration: 0.3}
+                      transition: {delay: 0.3, duration: 0.2}
                     },
                   hide: {
                     ...variants.hide,
@@ -68,7 +68,7 @@ const MenuList = (props) => {
                   show:
                     {
                       ...variants.show,
-                      transition: {delay: 0.5, duration: 0.3}
+                      transition: {delay: 0.4, duration: 0.2}
                     },
                   hide: {
                     ...variants.hide,
@@ -85,7 +85,7 @@ const MenuList = (props) => {
                   show:
                     {
                       ...variants.show,
-                      transition: {delay: 0.6, duration: 0.3}
+                      transition: {delay: 0.5, duration: 0.2}
                     },
                   hide: {
                     ...variants.hide,
@@ -103,7 +103,7 @@ const MenuList = (props) => {
                   show:
                     {
                       ...variants.show,
-                      transition: {delay: 0.7, duration: 0.3}
+                      transition: {delay: 0.6, duration: 0.2}
                     },
                   hide: {
                     ...variants.hide,
