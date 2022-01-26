@@ -10,7 +10,6 @@ import {size} from '../../Utils/DeviceSize'
 import ToggleBtn from "../ToggleBtn/ToggleBtn";
 import MenuList from "../MenuList/MenuList";
 import {useWindowSize} from "../../../hooks/useWindowSize";
-import {useOpenClose} from "../../../context/OpenCloseProvider";
 
 const menuVariants = {
   open: {

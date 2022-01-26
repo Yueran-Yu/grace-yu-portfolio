@@ -3,7 +3,7 @@ import {deviceSize} from "../../Utils/DeviceSize";
 import {motion} from "framer-motion";
 
 export const NavContainer = styled.div`
-  background: linear-gradient(to right, ${({theme: {chosenTheme}}) => chosenTheme.bodyColor2} 35%, ${({theme: {chosenTheme}}) => chosenTheme.bodyColor3});
+  background: linear-gradient(to right, ${({theme: {chosenTheme}}) => chosenTheme.bodyColor2}, ${({theme: {chosenTheme}}) => chosenTheme.bodyColor3} 66%);
   top: 0;
   display: grid;
   position: sticky;

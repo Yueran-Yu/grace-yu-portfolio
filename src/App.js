@@ -1,6 +1,6 @@
 import {useRef} from 'react';
 import {Nav, Home, About, Work, Contact, BackToTop, Footer} from "./components";
-import {fontSize, GlobalStyle} from "./components/gobalStyles";
+import {fontCollection, GlobalStyle} from "./components/gobalStyles";
 import {useScrollPosition} from "./hooks/useScrollPosition";
 import {ThemeProvider} from "styled-components";
 import {lightTheme, darkTheme} from './components/gobalStyles'
@@ -21,7 +21,7 @@ const App = () => {
   const chosenTheme = isDark ? darkTheme : lightTheme
 
   return (
-    <ThemeProvider theme={{chosenTheme, fontSize, isOpen}}>
+    <ThemeProvider theme={{chosenTheme, fontCollection, isOpen}}>
       <GlobalStyle/>
       <Nav isDark={isDark}
            themeChange={toggleTheme}

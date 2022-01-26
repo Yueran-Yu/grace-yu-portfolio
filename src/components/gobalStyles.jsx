@@ -2,12 +2,14 @@ import {createGlobalStyle} from 'styled-components';
 import {normalize} from 'styled-normalize';
 import {deviceSize} from "./Utils/DeviceSize";
 
-export const fontSize = {
+export const fontCollection = {
   small: '1.1rem',
   middle: '1.4rem',
   large: '1.6rem',
   xLarge: '1.8rem',
-  xxLarge: '2rem'
+  xxLarge: '2rem',
+  sectionTitleSize:'2.3rem',
+  sectionTitleFF: 'Impact, fantasy'
 }
 
 export const lightTheme = {
@@ -16,12 +18,12 @@ export const lightTheme = {
   bodyColor3: 'azure',
   navHover: '#133467',
   color: '#133467',
-  imgBg: 'rgba(19, 52, 103, 0.7);',
+  imgBg: '#1c4d97',
   fixedNavColor: '#f1faee',
   toTopColor: '#e8efe8',
   nightBackground: '#133467',
   nightModeColor: 'ghostwhite',
-  toTopBackground: '#457b9d'
+  toTopBackground: '#1c4d97'
 }
 
 export const darkTheme = {
@@ -34,7 +36,7 @@ export const darkTheme = {
   nightBackground: 'ghostwhite',
   nightModeColor: '#133467',
   fixedNavColor: '#457b9d',
-  toTopColor: '#457b9d',
+  toTopColor: '#1c4d97',
   toTopBackground: '#e8efe8'
 }
 

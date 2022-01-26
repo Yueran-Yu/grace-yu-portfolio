@@ -1,4 +1,4 @@
-import React, {useState, createContext, useContext, useEffect, useCallback} from 'react';
+import React, {useState, createContext, useContext, useCallback} from 'react';
 
 const OpenCloseContext = createContext(false)
 

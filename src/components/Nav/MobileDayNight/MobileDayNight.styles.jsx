@@ -4,9 +4,9 @@ export const MobileDayNightContainer = styled.div`
 
   .outside {
     width: 100%;
-    height: 30px;
+    height: 35px;
     padding: 5px 0;
-    line-height: 15px;
+    line-height: 25px;
     border-radius: 5px;
     font-size: 15px;
     font-family: "Comic Sans MS", sans-serif;

@@ -1,10 +1,13 @@
 import React from 'react';
 import {WorkContainer} from "./Work.styles";
+import SectionTitle from "../SectionTitle/SectionTitle";
 
 const Work = () => {
   return (
     <WorkContainer id='work'>
-      <h1>WORK page</h1>
+      <SectionTitle>
+        Work
+      </SectionTitle>
     </WorkContainer>
   );
 };

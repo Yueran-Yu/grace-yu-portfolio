@@ -1,7 +1,9 @@
 import styled from "styled-components";
+import {deviceSize} from "../Utils/DeviceSize";
 
 export const CustomBtnContainer = styled.a`
   display: inline-block;
+  cursor: pointer;
   padding: 6px 20px;
   border-radius: 5px;
   border: none;
@@ -12,6 +14,10 @@ export const CustomBtnContainer = styled.a`
   transition: all 0.2s ease-in-out;
   text-decoration: none;
   font-family: 'Monda', sans-serif;
+
+  @media screen and ${deviceSize.mobile} {
+    margin: 0;
+  }
 
   &:hover {
     transform: scale(1.1);

@@ -23,13 +23,12 @@ const Home = () => {
         <HelloText>Hello everyone👋, I'm</HelloText>
         <MyName>Grace Yu</MyName>
         <SelfText>I'm a persistent and life-long learning front end web developer</SelfText>
-        <ResumeBtn href={process.env.PUBLIC_URL + "Grace_Yu_Resume.pdf"}
-                   download='Grace_Yu_Resume.pdf'>Resume</ResumeBtn>
+        <ResumeBtn href={process.env.PUBLIC_URL + "Grace_Yu_Resume.pdf"} target='_blank'>Resume</ResumeBtn>
         <SocialMedia>
-          <MediaItem><FaTwitterSquare/></MediaItem>
-          <MediaItem><FaGithubSquare/></MediaItem>
-          <MediaItem><FaLinkedin/></MediaItem>
-          <MediaItem><FaBlog/></MediaItem>
+          <MediaItem href='https://twitter.com/librayuyueran'><FaTwitterSquare/></MediaItem>
+          <MediaItem href='https://github.com/Yueran-Yu'><FaGithubSquare/></MediaItem>
+          <MediaItem href='https://www.linkedin.com/in/grace-yyu/'><FaLinkedin/></MediaItem>
+          <MediaItem href='https://yueran-yu.github.io/'><FaBlog/></MediaItem>
         </SocialMedia>
       </SelfIntroduction>
     </HomeContainer>

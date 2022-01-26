@@ -15,7 +15,7 @@ const backAnimation = keyframes`
 export const HomeContainer = styled.div`
   margin-top: 5vh;
   position: relative;
-  height: 35vh;
+  height: 65vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
@@ -33,7 +33,7 @@ export const HomeContainer = styled.div`
   @media screen and ${deviceSize.mobile} {
     margin-top: 5vh;
     display: grid;
-    height: 57vh;
+    height: 60vh;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 10px;
@@ -62,8 +62,8 @@ export const HomeContainer = styled.div`
     }
 
     @media screen and ${deviceSize.mobile} {
-      width: 160px;
-      height: 160px;
+      width: 150px;
+      height: 150px;
     }
 
     img {
@@ -105,8 +105,8 @@ export const HomeContainer = styled.div`
     }
 
     @media screen and ${deviceSize.mobile} {
-      width: 160px;
-      height: 160px;
+      width: 150px;
+      height: 150px;
     }
   }
 `
@@ -115,14 +115,12 @@ export const SelfIntroduction = styled.div`
   text-align: center;
   margin: 20px 0;
 
-
-
 `
 
 export const MyName = styled.h2`
   margin: 20px 0;
   font-size: 65px;
-  font-family: Impact, fantasy;
+  font-family: ${({theme: {fontCollection}}) => (fontCollection.sectionTitleFF)};
   text-transform: uppercase;
   background-image: var(--gradient);
   -webkit-background-clip: text;
@@ -156,20 +154,20 @@ export const HelloText = styled.p`
 
 export const SelfText = styled.p`
   margin: 20px;
-  font-size: ${({theme: {fontSize}}) => (fontSize.xLarge)};
+  font-size: ${({theme: {fontCollection}}) => (fontCollection.large)};
 
 
   @media screen and ${deviceSize.tablet} {
-    font-size: ${({theme: {fontSize}}) => (fontSize.large)};
+    font-size: ${({theme: {fontCollection}}) => (fontCollection.middle)};
   }
 
   @media screen and ${deviceSize.mobile} {
-    font-size: ${({theme: {fontSize}}) => (fontSize.middle)};
+    font-size: ${({theme: {fontCollection}}) => (fontCollection.small)};
   }
 `
 
 export const ResumeBtn = styled(CustomBtnContainer)`
-  font-size: ${({theme: {fontSize}}) => (fontSize.small)};
+  font-size: ${({theme: {fontCollection}}) => (fontCollection.small)};
 `
 
 export const SocialMedia = styled.ul`
@@ -180,11 +178,11 @@ export const SocialMedia = styled.ul`
 `
 export const MediaItem = styled.li`
   margin: 15px 10px;
-  font-size: ${({theme: {fontSize}}) => (fontSize.xLarge)};
+  font-size: ${({theme: {fontCollection}}) => (fontCollection.xLarge)};
 
 
   @media screen and ${deviceSize.mobile} {
-    font-size: ${({theme: {fontSize}}) => (fontSize.middle)};
+    font-size: ${({theme: {fontCollection}}) => (fontCollection.middle)};
   }
 
   &:hover {
