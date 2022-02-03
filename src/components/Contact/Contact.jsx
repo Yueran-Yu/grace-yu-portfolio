@@ -1,7 +1,6 @@
 import React, {useRef, useState, useEffect} from 'react';
 import emailjs from '@emailjs/browser';
-import {ContactContainer, FormContainer, SendBtn} from "./Contact.styles";
-import SectionTitle from "../SectionTitle/SectionTitle";
+import {ContactContainer, FormContainer, SendBtn, WrapTitle} from "./Contact.styles";
 
 const Contact = () => {
   const form = useRef()
@@ -37,9 +36,9 @@ const Contact = () => {
 
   return (
     <ContactContainer id='contact'>
-      <SectionTitle>
+      <WrapTitle>
         Get In Touch
-      </SectionTitle>
+      </WrapTitle>
       <FormContainer ref={form} onSubmit={sendEmail} className="w-full max-w-lg">
         <div className="flex flex-wrap -mx-3 mb-6">
           <div className="w-full px-3">

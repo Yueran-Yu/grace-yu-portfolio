@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {deviceSize} from "../Utils/DeviceSize";
+import SectionTitle from "../SectionTitle/SectionTitle";
 
 export const ContactContainer = styled.div`
   padding: 0 20px;
@@ -9,11 +10,31 @@ export const ContactContainer = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
-
+  
   @media screen and ${deviceSize.mobile} {
-    padding: 0 10px;
-    margin: 0 10px;
+    span:before,
+    span:after {
+      width: 20vw;
+    }
+
+    span:before {
+      right: 90%;
+      margin-right: 15%;
+    }
+
+    span:after {
+      left: 90%;
+      margin-left: 15%;
+    }
   }
+
+`
+
+export const WrapTitle = styled(SectionTitle)`
+  
+  margin: 0 20px;
+  
+
 `
 
 export const FormContainer = styled.form`
