@@ -8,7 +8,7 @@ export const fontCollection = {
   large: '1.6rem',
   xLarge: '1.8rem',
   xxLarge: '2rem',
-  sectionTitleSize:'2.3rem',
+  sectionTitleSize:'2.4rem',
   sectionTitleFF: 'Impact, fantasy'
 }
 

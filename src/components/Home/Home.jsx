@@ -17,7 +17,7 @@ const Home = () => {
     <HomeContainer id='home'>
       <div className='photo'>
         <Image imageName={`photo`}/>
-        {/*<img src={require('./image/photo.webp')} alt='avatar'/>*/}
+        {/*<imgya src={require('./image/photo.webp')} alt='avatar'/>*/}
       </div>
       <SelfIntroduction>
         <HelloText>Hello everyone👋, I'm</HelloText>

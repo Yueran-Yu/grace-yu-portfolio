@@ -127,7 +127,7 @@ const MenuList = (props) => {
               <NavLink to='work' spy={true} offset={-70} className='scroll-link'>Work</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to='contact' spy={true} offset={-300} className='scroll-link'>Contact</NavLink>
+              <NavLink to='contact' spy={true} offset={100} className='scroll-link'>Contact</NavLink>
             </NavItem>
             <NavItem>
               {width <= size.tablet ? <MobileDayNight {...props}/> : <DayNightSwitchButton {...props}/>}

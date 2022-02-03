@@ -2,8 +2,8 @@ import styled from "styled-components";
 import {deviceSize} from "../Utils/DeviceSize";
 
 export const ContactContainer = styled.div`
-  padding: 20px;
-  margin: 20px 20px 50px;
+  padding: 0 20px;
+  margin: 0 20px 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -30,7 +30,7 @@ export const SendBtn = styled.button`
   display: inline-block;
   cursor: pointer;
   padding: 6px 20px;
-  border:none;
+  border: none;
   border-radius: 5px;
   margin: 20px auto;
   background: linear-gradient(135deg, #ffc75f, #f68aa4, #f579cf);

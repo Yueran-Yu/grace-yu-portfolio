@@ -1,6 +1,6 @@
 import styled, {keyframes} from 'styled-components';
 import {deviceSize} from "../Utils/DeviceSize";
-import {CustomBtnContainer} from "../CustomBtn/CustomBtn.styles";
+import {CustomBtnContainer} from "../CustomBtn.styles";
 
 const backAnimation = keyframes`
   0% {

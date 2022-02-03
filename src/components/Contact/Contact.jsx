@@ -49,7 +49,7 @@ const Contact = () => {
             </label>
             <input
               className="appearance-none block w-full bg-sky-100 text-sky-900 border border-sky-900 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-              id="grid-full-name" type="text" placeholder="Jane Smith" name='fullName'/>
+              id="grid-full-name" type="text" placeholder="Jane Smith" name='fullName' required/>
             <p className="text-red-500 text-xs italic">Please fill out this field.</p>
           </div>
         </div>
@@ -62,7 +62,7 @@ const Contact = () => {
             </label>
             <input
               className="appearance-none block w-full bg-sky-100 text-sky-900 border border-sky-800 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-sky-300"
-              id="email" name='email' type="email"/>
+              id="email" name='email' type="email" required/>
           </div>
         </div>
         <div className="flex flex-wrap -mx-3 mb-6">
@@ -84,7 +84,7 @@ const Contact = () => {
             </label>
             <textarea
               className=" no-resize appearance-none block w-full text-sky-200 text-sky-900 border border-sky-900 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-sky-500 h-48 resize-none"
-              id="message" name='message'>
+              id="message" name='message' required>
             </textarea>
           </div>
         </div>
