@@ -15,7 +15,7 @@ export const fontCollection = {
 export const lightTheme = {
   bodyColor1: 'white',
   bodyColor2: 'ghostwhite',
-  bodyColor3: 'azure',
+  bodyColor3: '#ebf6ff',
   navHover: '#133467',
   color: '#133467',
   imgBg: '#1c4d97',
