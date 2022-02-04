@@ -27,14 +27,10 @@ export const ContactContainer = styled.div`
       margin-left: 15%;
     }
   }
-
 `
 
 export const WrapTitle = styled(SectionTitle)`
-  
   margin: 0 20px;
-  
-
 `
 
 export const FormContainer = styled.form`
@@ -63,6 +59,8 @@ export const SendBtn = styled.button`
 
   @media screen and ${deviceSize.mobile} {
     margin: 0;
+    padding: 6px 18px;
+    font-size: 0.8rem;
   }
 
   &:hover {

@@ -20,10 +20,9 @@ export const SectionContainer = styled.div`
 export const ChildSection = styled.section`
   display: flex;
   flex-direction: row;
-  margin-top: 3rem;
+  margin-top: 1rem;
   margin-bottom: 5rem;
   margin-right: -8vw;
-
 
   @media screen and ${deviceSize.tablet} {
     margin-top: 0;
@@ -46,10 +45,19 @@ export const FirstChild = styled.div`
   margin-right: -8vw;
   border-radius: 5px;
   box-shadow: rgba(255, 255, 255, 0.08) 0 4px 12px;
+  color: ghostwhite;
 
   .child-title {
     font-size: 1.5rem;
-    padding: 1rem 0;
+    padding-bottom: 1rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 800;
+
+    @media screen and ${deviceSize.mobile} {
+      font-size: 1.3rem;
+      padding-bottom: 0.5rem;
+
+    }
   }
 
   @media screen and ${deviceSize.tablet} {
@@ -57,7 +65,15 @@ export const FirstChild = styled.div`
     flex-direction: column;
     margin-right: 0;
     width: 90%;
+    max-width: 35rem;
+  }
 
+  @media screen and ${deviceSize.mobile} {
+    display: flex;
+    flex-direction: column;
+    margin-right: 0;
+    width: 90%;
+    max-width: 25rem;
   }
 `
 
@@ -70,10 +86,17 @@ export const SecondChild = styled.div`
   align-self: center;
   min-width: 25rem;
   border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
 
   @media screen and ${deviceSize.tablet} {
     width: 90%;
     min-width: 20rem;
+    max-width: 35rem;
+  }
+
+  @media screen and ${deviceSize.mobile} {
+    width: 90%;
+    max-width: 25rem;
   }
 
   img {
@@ -94,9 +117,15 @@ export const UlWrapper = styled.ul`
   padding: 1rem 0;
   min-width: 25vw;
   max-width: 30vw;
+  font-family: Courier New, monospace;
+
+  li {
+    font-weight: 5;
+    font-size: 0.8rem;
+  }
 
   @media screen and ${deviceSize.tablet} {
-    min-width: 80%;
+    min-width: 95%;
   }
 `
 
@@ -104,6 +133,7 @@ export const ButtonWrapper = styled.div`
   display: flex;
   justify-content: space-around;
 `
+
 export const ChildBtn = styled(CustomBtnContainer)`
   font-size: 0.8rem;
   font-weight: 100;

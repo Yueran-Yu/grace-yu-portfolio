@@ -15,8 +15,8 @@ export const SectionTitleContainer = styled.div`
     content: "";
     position: absolute;
     height: 5px;
-    border-bottom: 1px solid white;
-    border-top: 1px solid white;
+    border-bottom: 1px solid ${({theme: {chosenTheme}}) => chosenTheme.color};
+    border-top: 1px solid ${({theme: {chosenTheme}}) => chosenTheme.color};
     top: 20px;
     width: 22vw;
   }
