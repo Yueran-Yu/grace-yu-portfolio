@@ -22,7 +22,6 @@ export const ChildSection = styled.section`
   flex-direction: row;
   margin-top: 1rem;
   margin-bottom: 5rem;
-  margin-right: -8vw;
 
   @media screen and ${deviceSize.tablet} {
     margin-top: 0;
@@ -34,18 +33,21 @@ export const ChildSection = styled.section`
 
 export const FirstChild = styled.div`
   background: var(--prussian-blue);
-  width: 45%;
-  height: 90%;
+  width: 55%;
+  height: 85%;
   display: flex;
   flex-direction: column;
   align-self: center;
   padding: 1rem 1.5rem;
   min-width: 10rem;
+  margin-right: -10vw;
+  margin-left: 2.5vw;
+
   z-index: 2;
-  margin-right: -8vw;
   border-radius: 5px;
   box-shadow: rgba(255, 255, 255, 0.08) 0 4px 12px;
   color: ghostwhite;
+
 
   .child-title {
     font-size: 1.5rem;
@@ -56,7 +58,6 @@ export const FirstChild = styled.div`
     @media screen and ${deviceSize.mobile} {
       font-size: 1.3rem;
       padding-bottom: 0.5rem;
-
     }
   }
 
@@ -66,6 +67,7 @@ export const FirstChild = styled.div`
     margin-right: 0;
     width: 90%;
     max-width: 35rem;
+    margin-left: 0;
   }
 
   @media screen and ${deviceSize.mobile} {
@@ -74,17 +76,19 @@ export const FirstChild = styled.div`
     margin-right: 0;
     width: 90%;
     max-width: 25rem;
+    margin-left: 0;
   }
 `
 
 export const SecondChild = styled.div`
   background: whitesmoke;
-  width: 55%;
+  width: 45%;
   padding: 1rem;
-  height: 50%;
+  height: 30%;
   display: flex;
-  align-self: center;
+  align-self: end;
   min-width: 25rem;
+  margin-left: 5vw;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
 
@@ -92,11 +96,18 @@ export const SecondChild = styled.div`
     width: 90%;
     min-width: 20rem;
     max-width: 35rem;
+    display: flex;
+    align-self: center;
+    margin-left: 0;
+
   }
 
   @media screen and ${deviceSize.mobile} {
     width: 90%;
     max-width: 25rem;
+    display: flex;
+    align-self: center;
+    margin-left: 0;
   }
 
   img {

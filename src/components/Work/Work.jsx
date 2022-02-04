@@ -24,7 +24,6 @@ const Work = () => {
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci aliquid corporis,
               dignissimos ea et ex ipsum itaque laboriosam, nostrum praesentium sit tenetur vero? Cumque ducimus eaque
               laboriosam nisi possimus.</p>
-
             <UlWrapper>
               <li>Skill 1</li>
               <li>Skill 2</li>
