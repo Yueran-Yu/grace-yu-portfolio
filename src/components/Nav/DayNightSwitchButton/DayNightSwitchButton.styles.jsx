@@ -11,7 +11,7 @@ export const SwitchButtonContainer = styled.div`
     cursor: pointer;
   }
 
-  .toggle.dark {
+  .toggle.night {
     background-image: linear-gradient(midnightblue, rebeccapurple);
   }
 
@@ -36,7 +36,7 @@ export const SwitchButtonContainer = styled.div`
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4) inset;
   }
 
-  .dark .crater {
+  .night .crater {
     opacity: 0.4;
   }
 
@@ -64,7 +64,7 @@ export const SwitchButtonContainer = styled.div`
     transform: rotate(45deg);
   }
 
-  .dark > .notch {
+  .night > .notch {
     background: whitesmoke;
     box-shadow: 0 0 3px whitesmoke;
     transform: translateX(22px);
@@ -99,28 +99,28 @@ export const SwitchButtonContainer = styled.div`
     left: 45%;
   }
 
-  .dark .shape {
+  .night .shape {
     background: lightgray;
     box-shadow: 0 0 3px 1px violet;
   }
 
-  .dark .shape.sm {
+  .night .shape.sm {
     height: 2px;
     width: 2px;
     transform: translate(-25px, 0);
   }
 
-  .dark .shape.sm:first-of-type {
+  .night .shape.sm:first-of-type {
     transform: translate(-14px, -3px);
   }
 
-  .dark .shape.md {
+  .night .shape.md {
     height: 5px;
     width: 5px;
     transform: translate(-6px, -2px);
   }
 
-  .dark .shape.lg {
+  .night .shape.lg {
     height: 3px;
     width: 3px;
     transform: translate(-5px, 0);

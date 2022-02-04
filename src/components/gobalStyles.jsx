@@ -1,30 +1,63 @@
 import {createGlobalStyle} from 'styled-components';
 import {normalize} from 'styled-normalize';
+import {deviceSize} from "./Utils/DeviceSize";
+
+export const fontCollection = {
+  small: '1.1rem',
+  middle: '1.4rem',
+  large: '1.6rem',
+  xLarge: '1.8rem',
+  xxLarge: '2rem',
+  sectionTitleSize:'2.4rem',
+  sectionTitleFF: 'Impact, fantasy'
+}
 
 export const lightTheme = {
-  bodyColor: '#FFFFFF',
-  color: '#1b2f50',
+  bodyColor1: 'white',
+  bodyColor2: 'ghostwhite',
+  bodyColor3: '#ebf6ff',
+  navHover: '#133467',
+  color: '#133467',
+  imgBg: '#1c4d97',
   fixedNavColor: '#f1faee',
   toTopColor: '#e8efe8',
-  toTopBackground: '#457b9d'
+  nightBackground: '#133467',
+  nightModeColor: 'ghostwhite',
+  toTopBackground: '#1c4d97'
 }
 
 export const darkTheme = {
-  bodyColor: '#1b2f50',
-  color: '#f1faee',
+  bodyColor1: '#030f20',
+  bodyColor2: '#295496',
+  bodyColor3: '#133467',
+  navHover: 'ghostwhite',
+  color: 'ghostwhite',
+  imgBg: 'rgba(255, 255, 255);',
+  nightBackground: 'ghostwhite',
+  nightModeColor: '#133467',
   fixedNavColor: '#457b9d',
-  toTopColor: '#457b9d',
+  toTopColor: '#1c4d97',
   toTopBackground: '#e8efe8'
 }
 
 export const GlobalStyle = createGlobalStyle`
   ${normalize}
   :root {
+    --gradient: linear-gradient(135deg,
+    #845ec2,
+    #d65db1,
+    #ff6f91,
+    #ffc75f);
+
+    --dark-blue: #030f20;
+    --second-dark-blue: #062e5b;
     --prussian-blue: #1b2f50;
     --celadon-blue: #457b9d;
     --powder-blue: #A8DADC;
     --honeydew: #f1faee;
     --imperial-red: #E63946;
+    --ghostwhite: ghostwhite;
+    --azure: azure;
     --white: #FFFFFF;
     --font-color: #292929;
     --main-font: 'Roboto', sans-serif;
@@ -42,15 +75,19 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: ${({theme}) => theme.bodyColor};
+    background: linear-gradient(135deg, ${({theme: {chosenTheme}}) => chosenTheme.bodyColor2}, ${({theme: {chosenTheme}}) => chosenTheme.bodyColor1});
     height: 100%;
     font-family: var(--main-font);
     background-size: auto;
-    color: ${({theme}) => theme.color};
+    color: ${({theme: {chosenTheme}}) => chosenTheme.color};
     min-height: 100vh;
     min-height: -webkit-fill-available;
     //background-image: linear-gradient(to bottom, var(--light-green), var(--dark-green));
       //url(${process.env.PUBLIC_URL + `/images/backgroundImage.jpeg`});
+
+    @media screen and ${deviceSize.tablet} {
+      overflow-y: ${({theme: {isOpen}}) => (isOpen ? 'hidden' : 'visible')};
+    }
   }
 
   ul {

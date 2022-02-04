@@ -8,7 +8,6 @@ import {FooterContainer} from "./Footer.styles";
       <div>
       <p>&copy; Made By Grace Yu  &#10084; {date} </p>
       </div>
-      <div> social media</div>
     </FooterContainer>
   )
 }

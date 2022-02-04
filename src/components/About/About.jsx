@@ -1,10 +1,13 @@
 import React from 'react';
 import {AboutContainer} from "./About.styles";
+import SectionTitle from "../SectionTitle/SectionTitle";
 
 const About = () => {
   return (
     <AboutContainer id='about'>
-      <h1>Here I need to know, if the font is suitable</h1>
+      <SectionTitle>
+        About Me
+      </SectionTitle>
     </AboutContainer>
   );
 };

@@ -1,9 +1,12 @@
 import styled from 'styled-components';
 
 export const AboutContainer = styled.div`
-  height: 90vh;
+  height: 60vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
 
-  h1{
+  h1 {
     font-size: 50px;
   }
 `
