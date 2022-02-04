@@ -175,6 +175,7 @@ export const SocialMedia = styled.ul`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-top:15px;
 `
 export const MediaItem = styled.li`
   margin: 15px 10px;

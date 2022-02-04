@@ -8,7 +8,7 @@ export const fontCollection = {
   large: '1.6rem',
   xLarge: '1.8rem',
   xxLarge: '2rem',
-  sectionTitleSize:'2.4rem',
+  sectionTitleSize: '2.4rem',
   sectionTitleFF: 'Impact, fantasy'
 }
 
@@ -23,7 +23,9 @@ export const lightTheme = {
   toTopColor: '#e8efe8',
   nightBackground: '#133467',
   nightModeColor: 'ghostwhite',
-  toTopBackground: '#1c4d97'
+  toTopBackground: '#1c4d97',
+  cardBgColor1: '#c6dffc',
+  cardBgColor2: 'white',
 }
 
 export const darkTheme = {
@@ -37,7 +39,9 @@ export const darkTheme = {
   nightModeColor: '#133467',
   fixedNavColor: '#457b9d',
   toTopColor: '#1c4d97',
-  toTopBackground: '#e8efe8'
+  toTopBackground: '#e8efe8',
+  cardBgColor1: '#07234e',
+  cardBgColor2: '#d5e6fa',
 }
 
 export const GlobalStyle = createGlobalStyle`
@@ -59,6 +63,7 @@ export const GlobalStyle = createGlobalStyle`
     --ghostwhite: ghostwhite;
     --azure: azure;
     --white: #FFFFFF;
+    --card-bgColor: #a0e2f8;
     --font-color: #292929;
     --main-font: 'Roboto', sans-serif;
     --radius: 0.3rem;
