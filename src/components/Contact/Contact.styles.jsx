@@ -37,7 +37,7 @@ export const FormContainer = styled.form`
   margin: 20px 30px;
 
   @media screen and ${deviceSize.mobile} {
-    margin: 0 10px;
+    margin: 45px 10px;
   }
 `
 
