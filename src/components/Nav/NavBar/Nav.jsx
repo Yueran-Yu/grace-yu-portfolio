@@ -31,7 +31,7 @@ const Nav = (props) => {
   return (
     <NavContainer id='nav'>
       <LeftNavContainer>
-        <Logo/>
+        <Logo id ='home'/>
       </LeftNavContainer>
       <ToggleBtn toggle={toggleOpenClose} isOpen={isOpen}/>
       <RightNavContainer>
