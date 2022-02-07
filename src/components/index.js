@@ -1,13 +1,5 @@
 export {default as Loading} from './Loading/Loading';
 
-export {default as About} from './About/About';
-export {default as Home} from './Home/Home';
-export {default as Work} from './Work/Work'
-export {default as Nav} from './Nav/NavBar/Nav';
-export {default as Contact} from './Contact/Contact';
-export {default as BackToTop} from './BackToTop/BackToTop';
-export {default as Footer} from './Footer/Footer';
-
 
 
 

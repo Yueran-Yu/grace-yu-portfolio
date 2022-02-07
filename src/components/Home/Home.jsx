@@ -17,12 +17,11 @@ const Home = () => {
     <HomeContainer id='home'>
       <div className='photo'>
         <Image imageName={`photo`}/>
-        {/*<imgya src={require('./image/photo.webp')} alt='avatar'/>*/}
       </div>
       <SelfIntroduction>
         <HelloText>Hello everyone👋, I'm</HelloText>
         <MyName>Grace Yu</MyName>
-        <SelfText>I'm a persistent and life-long learning front end web developer</SelfText>
+        <SelfText>I'm a self-taught, persistent and life-long learning front end web developer</SelfText>
         <ResumeBtn href={process.env.PUBLIC_URL + "Grace_Yu_Resume.pdf"} target='_blank'>Resume</ResumeBtn>
         <SocialMedia>
           <MediaItem href='https://twitter.com/librayuyueran'><FaTwitterSquare/></MediaItem>

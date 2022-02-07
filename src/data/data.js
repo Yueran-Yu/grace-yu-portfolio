@@ -9,9 +9,9 @@ export const PROJECTS_DATA = [
     content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci aliquid corporis, dignissimos ea et ex ipsum itaque laboriosam, nostrum praesentium sit tenetur vero? Cumque ducimus eaque laboriosam nisi possimus.',
     projectUrl: '#',
     githubUrl: '#',
-    skills: ['skill 1', 'skill 2', 'skill 3', 'skill 4', 'skill 5'],
+    skills: ['React', 'Firebase', 'Rapid-API', 'Stripe-API', 'Redux', 'Authentication', 'Styled-Components'],
     img: happyFamilyApp,
-    alt: 'happy Family Clothing'
+    alt: 'Happy Family Clothing'
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ export const PROJECTS_DATA = [
     content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci aliquid corporis, dignissimos ea et ex ipsum itaque laboriosam, nostrum praesentium sit tenetur vero? Cumque ducimus eaque laboriosam nisi possimus.',
     projectUrl: '#',
     githubUrl: '#',
-    skills: ['skill 1', 'skill 2', 'skill 3', 'skill 4', 'skill 5'],
+    skills: ['React', 'Typescript','UI/UX', 'Custom-Hooks', 'Local-Storage', 'Apache-ECharts', 'React-Icons','Webpack'],
     img: spendingApp,
     alt: 'spending App'
   },
@@ -29,7 +29,7 @@ export const PROJECTS_DATA = [
     content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci aliquid corporis, dignissimos ea et ex ipsum itaque laboriosam, nostrum praesentium sit tenetur vero? Cumque ducimus eaque laboriosam nisi possimus.',
     projectUrl: '#',
     githubUrl: '#',
-    skills: ['skill 1', 'skill 2', 'skill 3', 'skill 4', 'skill 5'],
+    skills: ['React', 'Custom-Hooks', 'UI/UX','Figma', 'Framer-Motion', 'Animations','TailwindCss', 'Local-Storage'],
     img: myPortfolio,
     alt: 'my Portfolio'
   }

@@ -17,8 +17,8 @@ export const ChildSection = styled.section`
 `
 
 export const FirstChild = styled.div`
-  background: ${({theme:{chosenTheme}})=>(chosenTheme.cardBgColor1)};
-  color: ${({theme:{chosenTheme}})=>(chosenTheme.color)};
+  background: ${({theme: {chosenTheme}}) => (chosenTheme.cardBgColor1)};
+  color: ${({theme: {chosenTheme}}) => (chosenTheme.color)};
   width: 50%;
   height: 85%;
   display: flex;
@@ -65,8 +65,8 @@ export const FirstChild = styled.div`
 `
 
 export const SecondChild = styled.div`
-  background: ${({theme:{chosenTheme}})=>(chosenTheme.cardBgColor2)};
-  color: ${({theme:{chosenTheme}})=>(chosenTheme.color)};
+  background: ${({theme: {chosenTheme}}) => (chosenTheme.cardBgColor2)};
+  color: ${({theme: {chosenTheme}}) => (chosenTheme.color)};
   width: 50%;
   padding: 1rem;
   height: 30%;
@@ -113,20 +113,22 @@ export const SecondChild = styled.div`
 `
 
 export const UlWrapper = styled.ul`
-  display: flex;
-  justify-content: space-around;
-  padding: 1rem 0;
+  display: inline-block;
+  padding: 1rem 0.8rem;
   min-width: 25vw;
-  max-width: 30vw;
+  max-width: 35vw;
   font-family: Courier New, monospace;
 
   li {
-    font-weight: 5;
+    font-weight: 300;
     font-size: 0.8rem;
+    padding: 0.3rem;
+    display: inline;
   }
 
   @media screen and ${deviceSize.tablet} {
-    min-width: 95%;
+    min-width: 100%;
+    display: inline-block;
   }
 `
 
