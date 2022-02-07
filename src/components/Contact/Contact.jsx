@@ -82,7 +82,7 @@ const Contact = () => {
               Message
             </label>
             <textarea
-              className=" no-resize appearance-none block w-full text-sky-200 text-sky-900 border border-sky-900 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-sky-500 h-48 resize-none"
+              className=" no-resize appearance-none block w-full text-sky-900 border border-sky-900 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-sky-500 h-48 resize-none"
               id="message" name='message' required>
             </textarea>
           </div>
