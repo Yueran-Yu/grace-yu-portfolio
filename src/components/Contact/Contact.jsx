@@ -1,6 +1,6 @@
 import React, {useRef, useState, useEffect} from 'react';
 import emailjs from '@emailjs/browser';
-import ReCAPTCHA from 'react-google-recaptcha';
+import ReCAPTCHA from 'react-google-recaptcha-v3';
 import {ContactContainer, FormContainer, SendBtn, WrapTitle} from "./Contact.styles";
 
 const Contact = () => {
