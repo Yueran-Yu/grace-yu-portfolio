@@ -1,37 +1,50 @@
 import React, {useRef, useState, useEffect} from 'react';
 import emailjs from '@emailjs/browser';
+import ReCAPTCHA from 'react-google-recaptcha';
 import {ContactContainer, FormContainer, SendBtn, WrapTitle} from "./Contact.styles";
 
 const Contact = () => {
   const form = useRef()
   const [visible, setVisible] = useState(false)
   const [message, setMessage] = useState('')
+  const [verified, setVerified] = useState(false)
 
   useEffect(() => {
     let timer
-    if (visible) {
+    if (visible && verified) {
       setMessage('Your Message has been sent!')
       timer = setTimeout(() => {
         setVisible(false)
         setMessage('')
       }, 3000)
     }
-
     return () => clearTimeout(timer)
-  }, [visible])
+  }, [verified, visible])
 
   const sendEmail = (e) => {
     e.preventDefault();
+    if (verified) {
+      emailjs.sendForm("service_s35zlsp", "template_8eh9mgl", form.current, "user_9jaR9uK6p1lDg2YOkWPal")
+        .then((result) => {
+          console.log(result.text);
+        }, (error) => {
+          console.log(error.text);
+        })
 
-    emailjs.sendForm("service_s35zlsp", "template_8eh9mgl", form.current, "user_9jaR9uK6p1lDg2YOkWPal")
-      .then((result) => {
-        console.log(result.text);
-      }, (error) => {
-        console.log(error.text);
-      })
+      e.target.reset()
+      setVisible(true)
+      setVerified({verified: false})
+    } else {
+      setMessage('Please do the verification first.')
+      setTimeout(() => {
+        setMessage('')
+      }, 3000)
+    }
+  }
 
-    e.target.reset()
-    setVisible(true)
+  const ReCAPTCHAChange = (value) => {
+    console.log("Captcha value:", value);
+    setVerified({verified: true})
   }
 
   return (
@@ -87,6 +100,11 @@ const Contact = () => {
             </textarea>
           </div>
         </div>
+        <ReCAPTCHA
+          type="image"
+          sitekey="6Lecy2QeAAAAAALuBtzTfXxB-0oem4ko4XxUWUTL"
+          onChange={ReCAPTCHAChange}
+        />
         <SendBtn className='sendBtn'>Submit</SendBtn>
         <p>{message}</p>
       </FormContainer>
