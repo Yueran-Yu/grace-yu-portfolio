@@ -2,8 +2,9 @@ import styled from 'styled-components';
 
 export const SectionTitleContainer = styled.div`
   margin: 30px auto;
-  font-family: ${({theme: {fontCollection}}) => (fontCollection.sectionTitleFF)};
+  font-family: 'Oswald', sans-serif;
   font-size: ${({theme: {fontCollection}}) => (fontCollection.sectionTitleSize)};
+  font-weight: 900;
 
   span {
     display: inline-block;
