@@ -1,6 +1,6 @@
 import React, {useRef, useState, useEffect} from 'react';
 import emailjs from '@emailjs/browser';
-import ReCAPTCHA from 'react-google-recaptcha-v3';
+import ReCAPTCHA from 'react-google-recaptcha';
 import {ContactContainer, FormContainer, SendBtn, WrapTitle} from "./Contact.styles";
 
 const Contact = () => {
@@ -104,7 +104,7 @@ const Contact = () => {
           <div>
             <ReCAPTCHA
               type="image"
-              sitekey="6Lecy2QeAAAAAALuBtzTfXxB-0oem4ko4XxUWUTL"
+              sitekey="6LcR92YeAAAAAJ5fYqy4wg6RSM1fjAdmYFi2okdO"
               onChange={ReCAPTCHAChange}
             />
             <p>{message}</p>
