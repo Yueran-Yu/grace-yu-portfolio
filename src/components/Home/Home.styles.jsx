@@ -120,7 +120,8 @@ export const SelfIntroduction = styled.div`
 export const MyName = styled.h2`
   margin: 20px 0;
   font-size: 65px;
-  font-family: ${({theme: {fontCollection}}) => (fontCollection.sectionTitleFF)};
+  font-family: 'Oswald', sans-serif;
+  font-weight: 900;
   text-transform: uppercase;
   background-image: var(--gradient);
   -webkit-background-clip: text;
@@ -175,7 +176,7 @@ export const SocialMedia = styled.ul`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-top:15px;
+  margin-top: 15px;
 `
 export const MediaItem = styled.li`
   margin: 15px 10px;
