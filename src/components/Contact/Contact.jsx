@@ -100,13 +100,17 @@ const Contact = () => {
             </textarea>
           </div>
         </div>
-        <ReCAPTCHA
-          type="image"
-          sitekey="6Lecy2QeAAAAAALuBtzTfXxB-0oem4ko4XxUWUTL"
-          onChange={ReCAPTCHAChange}
-        />
-        <SendBtn className='sendBtn'>Submit</SendBtn>
-        <p>{message}</p>
+        <div className='rec'>
+          <div>
+            <ReCAPTCHA
+              type="image"
+              sitekey="6Lecy2QeAAAAAALuBtzTfXxB-0oem4ko4XxUWUTL"
+              onChange={ReCAPTCHAChange}
+            />
+            <p>{message}</p>
+          </div>
+          <SendBtn className='sendBtn'>Submit</SendBtn>
+        </div>
       </FormContainer>
     </ContactContainer>
   )
