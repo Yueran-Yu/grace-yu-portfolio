@@ -11,7 +11,7 @@ const SubProject = ({title, content, projectUrl, githubUrl, skills, img, alt}) =
           {skills.map((skill, index) => <li key={index}>{skill}</li>)}
         </UlWrapper>
         <ButtonWrapper>
-          <ChildBtn href={projectUrl} target='_blank'>View Project</ChildBtn>
+          <ChildBtn href={projectUrl} target='_blank'>Project</ChildBtn>
           <ChildBtn href={githubUrl} target='_blank'>Github</ChildBtn>
         </ButtonWrapper>
       </FirstChild>
