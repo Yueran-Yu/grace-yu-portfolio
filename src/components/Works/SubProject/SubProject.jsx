@@ -4,7 +4,7 @@ import {ButtonWrapper, ChildBtn, ChildSection, FirstChild, SecondChild, UlWrappe
 const SubProject = ({title, content, projectUrl, githubUrl, skills, img, alt}) => {
   return (
     <ChildSection>
-      <FirstChild>
+      <FirstChild className='first'>
         <div className='child-title'>{title}</div>
         <p>{content}</p>
         <UlWrapper>
@@ -19,7 +19,6 @@ const SubProject = ({title, content, projectUrl, githubUrl, skills, img, alt}) =
         <img src={img} alt={alt}/>
       </SecondChild>
     </ChildSection>
-
   )
 }
 export default SubProject;

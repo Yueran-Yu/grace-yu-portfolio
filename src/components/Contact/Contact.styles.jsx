@@ -64,7 +64,7 @@ export const SendBtn = styled.button`
   text-decoration: none;
   font-family: 'Monda', sans-serif;
   width: 100px;
-  height:35px;
+  height: 35px;
 
 
   @media screen and ${deviceSize.tablet} {
@@ -72,8 +72,9 @@ export const SendBtn = styled.button`
   }
 
   @media screen and ${deviceSize.mobile} {
-    padding: 4px 10px;
-    font-size: 1rem;
+    width: 80px;
+    height: 25px;
+    font-size: 0.8rem;
   }
 
   &:hover {
