@@ -7,12 +7,16 @@ export const ChildSection = styled.section`
   flex-direction: row;
   margin-top: 1rem;
   margin-bottom: 5rem;
+  cursor: pointer;
 
   @media screen and ${deviceSize.tablet} {
     margin-top: 0;
     margin-right: 0;
     width: 100%;
+    height: 100%;
     flex-direction: column-reverse;
+    position: relative;
+
   }
 `
 
@@ -28,10 +32,9 @@ export const FirstChild = styled.div`
   min-width: 10rem;
   margin-right: -10vw;
   margin-left: 2.5vw;
-  z-index: 2;
   border-radius: 5px;
-  box-shadow: rgba(255, 255, 255, 0.08) 0 4px 12px;
-
+  box-shadow: rgba(198, 223, 252, 0.08) 0 4px 12px;
+  z-index: 1;
 
   .child-title {
     font-size: 1.5rem;
@@ -42,6 +45,7 @@ export const FirstChild = styled.div`
     @media screen and ${deviceSize.mobile} {
       font-size: 1.3rem;
       padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
     }
   }
 
@@ -50,8 +54,14 @@ export const FirstChild = styled.div`
     flex-direction: column;
     margin-right: 0;
     width: 90%;
+    height: 100%;
     max-width: 35rem;
     margin-left: 0;
+    position: absolute;
+    background: ${({theme: {chosenTheme}}) => (chosenTheme.transBg)};
+    border: 2px solid ${({theme: {chosenTheme}}) => (chosenTheme.toTopBackground)};
+    justify-content: center;
+    align-items: center;
   }
 
   @media screen and ${deviceSize.mobile} {
@@ -61,6 +71,8 @@ export const FirstChild = styled.div`
     width: 90%;
     max-width: 25rem;
     margin-left: 0;
+    justify-content: center;
+    align-items: center;
   }
 `
 
@@ -84,7 +96,7 @@ export const SecondChild = styled.div`
     display: flex;
     align-self: center;
     margin-left: 0;
-
+    padding: 5vw;
   }
 
   @media screen and ${deviceSize.mobile} {
@@ -93,6 +105,7 @@ export const SecondChild = styled.div`
     display: flex;
     align-self: center;
     margin-left: 0;
+    padding: 26vw 5vw;
   }
 
   img {
@@ -102,7 +115,7 @@ export const SecondChild = styled.div`
     transition: all 0.5s ease-in-out;
 
     @media screen and ${deviceSize.tablet} {
-      height: 50%;
+      height: auto;
       padding: 0.5rem 0;
     }
   }
@@ -120,7 +133,7 @@ export const UlWrapper = styled.ul`
   font-family: Courier New, monospace;
 
   li {
-    font-weight: 300;
+    font-weight: 700;
     font-size: 0.8rem;
     padding: 0.3rem;
     display: inline;
@@ -135,9 +148,15 @@ export const UlWrapper = styled.ul`
 export const ButtonWrapper = styled.div`
   display: flex;
   justify-content: space-around;
+  width: 100%;
 `
 
 export const ChildBtn = styled(CustomBtnContainer)`
   font-size: 0.8rem;
   font-weight: 100;
+
+  @media screen and ${deviceSize.mobile} {
+    justify-content: space-between;
+    margin: 0 10px;
+  }
 `

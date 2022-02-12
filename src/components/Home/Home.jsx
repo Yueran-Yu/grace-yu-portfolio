@@ -21,7 +21,7 @@ const Home = () => {
       <SelfIntroduction>
         <HelloText>Hello everyone👋, I'm</HelloText>
         <MyName>Grace Yu</MyName>
-        <SelfText>I'm a self-taught, persistent and life-long learning front end web developer</SelfText>
+        <SelfText>I'm a self-taught, persistent and forever learning front end developer</SelfText>
         <ResumeBtn href={process.env.PUBLIC_URL + "Grace_Yu_Resume.pdf"} target='_blank'>Resume</ResumeBtn>
         <SocialMedia>
           <MediaItem href='https://twitter.com/librayuyueran'><FaTwitterSquare/></MediaItem>

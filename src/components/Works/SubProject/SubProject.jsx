@@ -4,14 +4,14 @@ import {ButtonWrapper, ChildBtn, ChildSection, FirstChild, SecondChild, UlWrappe
 const SubProject = ({title, content, projectUrl, githubUrl, skills, img, alt}) => {
   return (
     <ChildSection>
-      <FirstChild>
+      <FirstChild className='first'>
         <div className='child-title'>{title}</div>
         <p>{content}</p>
         <UlWrapper>
           {skills.map((skill, index) => <li key={index}>{skill}</li>)}
         </UlWrapper>
         <ButtonWrapper>
-          <ChildBtn href={projectUrl} target='_blank'>View Project</ChildBtn>
+          <ChildBtn href={projectUrl} target='_blank'>Project</ChildBtn>
           <ChildBtn href={githubUrl} target='_blank'>Github</ChildBtn>
         </ButtonWrapper>
       </FirstChild>
@@ -19,7 +19,6 @@ const SubProject = ({title, content, projectUrl, githubUrl, skills, img, alt}) =
         <img src={img} alt={alt}/>
       </SecondChild>
     </ChildSection>
-
   )
 }
 export default SubProject;

@@ -25,6 +25,7 @@ export const lightTheme = {
   toTopBackground: '#1c4d97',
   cardBgColor1: '#c6dffc',
   cardBgColor2: 'white',
+  transBg: `rgba(198,223,252, 0.88)`
 }
 
 export const darkTheme = {
@@ -41,6 +42,7 @@ export const darkTheme = {
   toTopBackground: '#e8efe8',
   cardBgColor1: '#07234e',
   cardBgColor2: '#d5e6fa',
+  transBg: `rgba(7, 35, 78, 0.88)`
 }
 
 export const GlobalStyle = createGlobalStyle`
