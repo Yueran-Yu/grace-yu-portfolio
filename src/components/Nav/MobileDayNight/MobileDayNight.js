@@ -6,7 +6,7 @@ const MobileDayNight = ({isDay, themeChange}) => {
   return (
     <MobileDayNightContainer onClick={themeChange}>
       <div className='outside'>
-         <div>TOGGLE {isDay ? 'DAY MODE' : 'NIGHT MODE'}</div>
+         <div>TOGGLE {isDay ? 'NIGHT MODE' : 'DAY MODE'}</div>
       </div>
     </MobileDayNightContainer>
   )

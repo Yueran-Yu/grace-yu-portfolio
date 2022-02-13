@@ -1,10 +1,9 @@
 import React, {createContext, useEffect, useContext, useState} from 'react';
 
-const DayNightThemeContext = createContext(false)
+const DayNightThemeContext = createContext(true)
 
 const DayNightThemeProvider = ({children}) => {
-  const [isDay, setTheme] = useState(localStorage.getItem('dayMode') === 'false')
-
+  const [isDay, setTheme] = useState(localStorage.getItem('dayMode') === 'true')
 
   useEffect(() => {
     localStorage.setItem('dayMode', JSON.stringify(isDay))
