@@ -8,7 +8,7 @@ export const PROJECTS_DATA = [
     id: 1,
     title: 'Spending App',
     content: 'I have the habit of recording my spending every day for more than ten years.  So in the process of learning React, I came up with the idea of making my own Spending App. You can do addition, subtraction, clear, with the calculator. Each entry can be viewed, edited, or deleted in the first Tab. I will gradually add more functions to make this app more perfect in the future.',
-    projectUrl: 'https://spending-log.netlify.app/#/money',
+    projectUrl: 'https://gy-spending.netlify.app/#/money',
     githubUrl: 'https://github.com/Yueran-Yu/spending-app-dev',
     skills: ['React', 'Typescript', 'UI/UX', 'Custom-Hooks', 'Local-Storage', 'Apache-ECharts', 'React-Icons', 'Webpack'],
     img: spendingApp,
