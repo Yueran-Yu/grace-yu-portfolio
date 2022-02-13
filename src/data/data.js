@@ -1,6 +1,7 @@
 import happyFamilyApp from '../assets/images/happyFamilyMockUp.png';
 import spendingApp from '../assets/images/SpendingMockUp.png';
 import myPortfolio from '../assets/images/myPortfolio.png'
+import coffeeShop from '../assets/images/coffeeShop.png';
 
 export const PROJECTS_DATA = [
   {
@@ -8,7 +9,7 @@ export const PROJECTS_DATA = [
     title: 'Spending App',
     content: 'I have the habit of recording my spending every day for more than ten years.  So in the process of learning React, I came up with the idea of making my own Spending App. You can do addition, subtraction, clear, with the calculator. Each entry can be viewed, edited, or deleted in the first Tab. I will gradually add more functions to make this app more perfect in the future.',
     projectUrl: 'https://spending-log.netlify.app/#/money',
-    githubUrl: 'https://github.com/Yueran-Yu/spending-log-dev',
+    githubUrl: 'https://github.com/Yueran-Yu/spending-app-dev',
     skills: ['React', 'Typescript', 'UI/UX', 'Custom-Hooks', 'Local-Storage', 'Apache-ECharts', 'React-Icons', 'Webpack'],
     img: spendingApp,
     alt: 'spending App'
@@ -32,6 +33,16 @@ export const PROJECTS_DATA = [
     skills: ['React', 'Custom-Hooks', 'UI/UX', 'Google-Recaptcha', 'Framer-Motion', 'Animations', 'TailwindCss', 'Local-Storage', 'React-Lazy'],
     img: myPortfolio,
     alt: 'Grace Portfolio'
+  },
+  {
+    id: 3,
+    title: 'GY Coffee Shop',
+    content: 'This is a simple landing page for marketing the specific coffee. It uses vanilla javascript code with html and font-awesome. It includes hamburger bar, loading page, video background with the on/off button.',
+    projectUrl: 'https://gy-coffee-shop.netlify.app/',
+    githubUrl: 'https://github.com/Yueran-Yu/coffee-shop',
+    skills: ['Javascript', 'Prototype', 'Font-Awesome','HTML', 'CSS'],
+    img: coffeeShop,
+    alt: 'GY Coffee Shop'
   }
 ]
 

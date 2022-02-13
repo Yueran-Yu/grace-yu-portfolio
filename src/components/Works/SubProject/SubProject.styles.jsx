@@ -5,8 +5,7 @@ import {CustomBtnContainer} from "../../CustomBtn.styles";
 export const ChildSection = styled.section`
   display: flex;
   flex-direction: row;
-  margin-top: 1rem;
-  margin-bottom: 5rem;
+  margin: 1.2rem 0;
   cursor: pointer;
 
   @media screen and ${deviceSize.tablet} {
@@ -64,7 +63,7 @@ export const FirstChild = styled.div`
     align-items: center;
   }
 
-  @media screen and ${deviceSize.mobile} {
+  @media screen and ${deviceSize.mobileSmall} {
     display: flex;
     flex-direction: column;
     margin-right: 0;
@@ -99,7 +98,7 @@ export const SecondChild = styled.div`
     padding: 5vw;
   }
 
-  @media screen and ${deviceSize.mobile} {
+  @media screen and ${deviceSize.mobileSmall} {
     width: 90%;
     max-width: 25rem;
     display: flex;
@@ -147,16 +146,18 @@ export const UlWrapper = styled.ul`
 
 export const ButtonWrapper = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   width: 100%;
+  margin-top: 20px;
+
 `
 
 export const ChildBtn = styled(CustomBtnContainer)`
   font-size: 0.8rem;
-  font-weight: 100;
+  font-weight: 200;
 
   @media screen and ${deviceSize.mobile} {
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin: 0 10px;
   }
 `
