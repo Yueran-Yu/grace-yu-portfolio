@@ -2,7 +2,7 @@ import React from 'react';
 import {SwitchButtonContainer} from "./DayNightSwitchButton.styles";
 
 export const DayNightSwitchButton = ({isDay, themeChange}) => {
-  const theme = isDay ? 'day' : 'night'
+  const theme = isDay ? 'night' : 'day'
   return (
     <SwitchButtonContainer onClick={themeChange}>
       <div className={`toggle ` + theme}>
