@@ -17,7 +17,7 @@ const Footer = lazy(() => import('../src/components/Footer/Footer'))
 
 const App = () => {
   const scrollPosition = useScrollPosition()
-  const {isDark, toggleTheme} = useDayNightTheme()
+  const {isDay, toggleTheme} = useDayNightTheme()
   const {isOpen, setOpen, toggleOpenClose} = useOpenClose()
   const toTop = useRef(null)
   if (toTop.current) {
@@ -27,14 +27,13 @@ const App = () => {
   }
 
   const Loader = () => <Loading/>
-
-  const chosenTheme = isDark ? darkTheme : lightTheme
+  const chosenTheme = isDay ? lightTheme : darkTheme
 
   return (
     <Suspense fallback={Loader()}>
       <ThemeProvider theme={{chosenTheme, fontCollection, isOpen}}>
         <GlobalStyle/>
-        <Nav isDark={isDark}
+        <Nav isDay={isDay}
              themeChange={toggleTheme}
              isOpen={isOpen}
              setOpen={setOpen}

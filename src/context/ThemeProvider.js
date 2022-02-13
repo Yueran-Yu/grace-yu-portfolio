@@ -1,26 +1,27 @@
 import React, {createContext, useEffect, useContext, useState} from 'react';
 
- const DayNightThemeContext = createContext(true)
+const DayNightThemeContext = createContext(false)
 
 const DayNightThemeProvider = ({children}) => {
-  const [isDark, setTheme] = useState(localStorage.getItem('darkMode') === 'true')
+  const [isDay, setTheme] = useState(localStorage.getItem('dayMode') === 'false')
 
-  useEffect(()=>{
-    localStorage.setItem('darkMode',  JSON.stringify(isDark))
-  },[isDark])
 
-  const toggleTheme = () => setTheme(!isDark)
+  useEffect(() => {
+    localStorage.setItem('dayMode', JSON.stringify(isDay))
+  }, [isDay])
+
+  const toggleTheme = () => setTheme(!isDay)
 
   return (
-    <DayNightThemeContext.Provider value={{isDark, toggleTheme}}>
+    <DayNightThemeContext.Provider value={{isDay, toggleTheme}}>
       {children}
     </DayNightThemeContext.Provider>
   );
 };
 
 export const useDayNightTheme = () => {
-  const {isDark, toggleTheme} = useContext(DayNightThemeContext)
-  return {isDark, toggleTheme}
+  const {isDay, toggleTheme} = useContext(DayNightThemeContext)
+  return {isDay, toggleTheme}
 }
 
 export default DayNightThemeProvider;

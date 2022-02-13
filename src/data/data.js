@@ -35,7 +35,7 @@ export const PROJECTS_DATA = [
     alt: 'Grace Portfolio'
   },
   {
-    id: 3,
+    id: 4,
     title: 'GY Coffee Shop',
     content: 'This is a simple landing page for marketing the specific coffee. It uses vanilla javascript code with html and font-awesome. It includes hamburger bar, loading page, video background with the on/off button.',
     projectUrl: 'https://gy-coffee-shop.netlify.app/',
