@@ -13,8 +13,8 @@ const Path = props => (
 const transition = {duration: 0.3}
 
 const ToggleBtn = ({toggle, isOpen}) => {
-  const {isDark} = useDayNightTheme()
-  const strokeColor = isDark ? 'white' : '#133467';
+  const {isDay} = useDayNightTheme()
+  const strokeColor = isDay ? '#133467' : 'white';
   return (
     <ToggleButton onClick={toggle} isOpen={isOpen}>
       <svg width="25" height="25" viewBox="0 0 25 25">
